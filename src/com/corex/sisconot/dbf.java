@@ -13,7 +13,7 @@ public class dbf {
         try {
 
             // create a DBFReader object
-            InputStream inputStream  = new FileInputStream("DATOS.DBF"); // take dbf file as program argument
+            InputStream inputStream  = new FileInputStream("data/DATOS.DBF"); // take dbf file as program argument
             DBFReader reader = new DBFReader(inputStream);
 
             // get the field count if you want for some reasons like the following
@@ -48,8 +48,8 @@ public class dbf {
 
                 for( int i=0; i<rowObjects.length; i++) {
                     System.out.println( rowObjects[i]);
+                    break;
                 }
-                break;
             }
 
             // By now, we have itereated through all of the rows
