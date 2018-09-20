@@ -22,15 +22,9 @@ public class MainWindow implements ActionListener {
         Ventana.setJMenuBar(mb);
         menu1=new JMenu("Opciones");
         mb.add(menu1);
-        mi1= new JMenuItem("Rojo");
-        mi1.addActionListener(e -> System.out.println("ROJOOO"));
+        mi1= new JMenuItem("Imprimir Certificacion");
+        mi1.addActionListener(e -> Certificacion.LanzarCertificacion());
         menu1.add(mi1);
-        mi2=new JMenuItem("Verde");
-        mi2.addActionListener(this);
-        menu1.add(mi2);
-        mi3=new JMenuItem("Azul");
-        mi3.addActionListener(this);
-        menu1.add(mi3);
     }
 
     public static void lanzarApp() {
@@ -49,7 +43,6 @@ public class MainWindow implements ActionListener {
         // Maximizar Ventana Principal
         mainWindow.Ventana.setExtendedState(MAXIMIZED_BOTH);
 
-        //Certificacion.LanzarCertificacion();
     }
 
     @Override

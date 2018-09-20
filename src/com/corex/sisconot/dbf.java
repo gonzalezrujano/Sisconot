@@ -4,65 +4,27 @@ import com.linuxense.javadbf.DBFException;
 import com.linuxense.javadbf.DBFField;
 import com.linuxense.javadbf.DBFReader;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.util.Date;
 
 public class dbf {
-    public static void LeerDatos() {
-        try {
 
-            // create a DBFReader object
-            InputStream inputStream  = new FileInputStream("data/DATOS.DBF"); // take dbf file as program argument
-            DBFReader reader = new DBFReader(inputStream);
+    public static boolean BuscarDatos(String Cedula) {
+        boolean RegistroEncontrado = false;
 
-            // get the field count if you want for some reasons like the following
-            //
-            int numberOfFields = reader.getFieldCount();
+        InputStream inputStream  = null;
+        try { inputStream = new FileInputStream("data/DATOS.DBF"); } catch (FileNotFoundException e) { e.printStackTrace(); }
+        DBFReader reader = new DBFReader(inputStream);
 
-            System.out.println("Nro de Campos: " + numberOfFields);
-
-            // use this count to fetch all field information
-            // if required
-            //
-
-
-
-            for( int i=0; i<numberOfFields; i++) {
-
-                DBFField field = reader.getField( i);
-
-                // do something with it if you want
-                // refer the JavaDoc API reference for more details
-                //
-                System.out.println( field.getName());
+        Object[] rowObjects;
+        while( (rowObjects = reader.nextRecord()) != null) {
+            if (rowObjects[0].equals(Cedula)) {
+                // Guardar -> Cedula - Nombres - Fecha - y Lugar de Nacimiento - Entidad Federal
+                Alumno DatosDelAlumno = new Alumno((String) rowObjects[0], (String) rowObjects[1], (Date) rowObjects[3], (String) rowObjects[4], (String) rowObjects[5]);
+                RegistroEncontrado = true;
             }
-
-
-
-            // Now, lets us start reading the rows
-            //
-            Object []rowObjects;
-
-            while( (rowObjects = reader.nextRecord()) != null) {
-
-                for( int i=0; i<rowObjects.length; i++) {
-                    System.out.println( rowObjects[i]);
-                    break;
-                }
-            }
-
-            // By now, we have itereated through all of the rows
-
-            inputStream.close();
         }
-        catch( DBFException e) {
-
-            System.out.println( e.getMessage());
-        }
-        catch( IOException e) {
-
-            System.out.println( e.getMessage());
-        }
+        return RegistroEncontrado;
     }
+
 }
