@@ -1,6 +1,6 @@
 package com.corex.sisconot;
 
-import com.corex.sisconot.utils.TextPrompt;
+import com.corex.sisconot.TextPrompt;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -185,7 +185,7 @@ public class Certificacion extends JDialog {
                 MostrarDatosDelAlumno();
             }
             else if (dbf.BuscarDatos(Cedula)) {
-                //BUSCARN NOTAS
+                //BUSCARN NOTAS Y HACER EQUIVALENCIA
                 MostrarDatosDelAlumno();
             } else {
                 Info.LanzarInfo("Alumno no encontrado");
