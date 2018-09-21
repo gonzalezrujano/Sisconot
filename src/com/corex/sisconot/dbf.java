@@ -27,4 +27,19 @@ public class dbf {
         return RegistroEncontrado;
     }
 
+    public static void BuscarNotas(String Cedula) {
+
+        InputStream inputStream  = null;
+        try { inputStream = new FileInputStream("data/RECORD.DBF"); } catch (FileNotFoundException e) { e.printStackTrace(); }
+        DBFReader reader = new DBFReader(inputStream);
+
+        Object[] rowObjects;
+        while( (rowObjects = reader.nextRecord()) != null) {
+            if (rowObjects[0].equals(Cedula)) {
+                if (rowObjects[2].equals("32012")) { Notas.recordBasica = rowObjects; }
+                if (rowObjects[2].equals("31022")) { Notas.recordDiversificado = rowObjects; }
+            }
+        }
+    }
+
 }

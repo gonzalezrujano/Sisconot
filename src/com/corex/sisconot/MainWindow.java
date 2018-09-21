@@ -1,6 +1,5 @@
 package com.corex.sisconot;
 
-import sun.applet.Main;
 
 import javax.swing.*;
 import java.awt.*;
@@ -42,6 +41,9 @@ public class MainWindow implements ActionListener {
 
         // Maximizar Ventana Principal
         mainWindow.Ventana.setExtendedState(MAXIMIZED_BOTH);
+
+        //TEMPORAL
+        Certificacion.LanzarCertificacion();
 
     }
 

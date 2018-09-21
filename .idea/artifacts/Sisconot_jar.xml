@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Sisconot:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Sisconot_jar</output-path>
+    <root id="archive" name="Sisconot.jar">
+      <element id="module-output" name="Sisconot" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../javadbf/target/javadbf-1.9.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
