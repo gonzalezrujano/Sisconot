@@ -19,4 +19,10 @@ public class Notas {
             Areas.add(Area);
         }
     }
+
+    public static void VaciarDatos() {
+        LlenarAreasSinDatos();
+        recordBasica = null;
+        recordDiversificado = null;
+    }
 }

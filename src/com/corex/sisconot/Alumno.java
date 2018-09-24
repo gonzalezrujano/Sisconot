@@ -30,4 +30,12 @@ public class Alumno {
             }
         }
     }
+
+    public static void VaciarDatos() {
+        Cedula = "";
+        Nombres = "";
+        FechaDeNacimiento = null;
+        LugarDeNacimiento = "";
+        EntidadFederal = "";
+    }
 }
