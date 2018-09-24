@@ -442,8 +442,8 @@ public class Equivalencia {
         GuardarMateria(mencion,"CN", CN);
     }
 
-    public Equivalencia() {
-        dbf.BuscarNotas("V-28086285"); //ABSTRAER  V-28086285
+    public Equivalencia(String Cedula) {
+        dbf.BuscarNotas(Cedula);
 
         Notas.LlenarAreasSinDatos();
 

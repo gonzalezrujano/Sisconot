@@ -4,13 +4,16 @@ import com.corex.sisconot.TextPrompt;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class Certificacion extends JDialog {
     private JPanel contentPane;
     private JButton buscarButton;
     private JButton salirButton;
     private JComboBox comboBox_Tipo_Cedula;
-    private JTextField cedulaTextField;
+    public JTextField cedulaTextField;
     private JTextField nombresTextField;
     private JTextField apellidosTextField;
     private JTextField fechaNacimientoTextField;
@@ -116,6 +119,7 @@ public class Certificacion extends JDialog {
     private JSpinner Nota_Quinto_LCC;
     private JComboBox TE_Quinto_LCC;
     private JTextField Cod_Quinto_LCC;
+    public static String Test = "ssss";
 
     public Certificacion() {
         // Definiciones de la Ventana
@@ -127,6 +131,8 @@ public class Certificacion extends JDialog {
         ColocarPlaceholdersEnTextField();
         AgregarEscuchaALosBotones();
         DefinirEventosDeSalida();
+
+        Nota_Primero_LCC.setValue(5);
     }
 
     private void DefinirTipoDeDocumento() {
@@ -185,7 +191,7 @@ public class Certificacion extends JDialog {
                 MostrarDatosDelAlumno();
             }
             else if (dbf.BuscarDatos(Cedula)) {
-                //BUSCARN NOTAS Y HACER EQUIVALENCIA
+                Equivalencia equivalencia = new Equivalencia(Cedula);
                 MostrarDatosDelAlumno();
             } else {
                 Info.LanzarInfo("Alumno no encontrado");
@@ -213,10 +219,31 @@ public class Certificacion extends JDialog {
 
     public static void LanzarCertificacion() {
         Certificacion dialog = new Certificacion();
+
+        /*Class c = dialog.getClass();
+        try {
+            //Field field = c.getField("cedulaTextField");
+            //Method method = (Method) JTextField.class.getMethod("setText", "Pruebaaa");
+            //Object returnValue = method.invoke(null, "parameter-value1");
+
+            //Field chap = c.getDeclaredField("cedulaTextField");
+            //chap.setText("Prueba");
+            //Object objeto = new Object();
+            System.out.println("Valor: " + field);
+            field.
+            //objeto.
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }*/
         dialog.setTitle("Imprimir certificacion");
         dialog.pack();
         dialog.setLocationRelativeTo(null);
         dialog.setVisible(true);
-        //System.exit(0);
     }
 }

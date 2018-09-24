@@ -24,6 +24,12 @@ public class MainWindow implements ActionListener {
         mi1= new JMenuItem("Imprimir Certificacion");
         mi1.addActionListener(e -> Certificacion.LanzarCertificacion());
         menu1.add(mi1);
+        mi2= new JMenuItem("Ajustes Generales");
+        mi2.addActionListener(e -> System.out.println("Lanzar Ajustes Generales"));
+        menu1.add(mi2);
+        mi3= new JMenuItem("Salir");
+        mi3.addActionListener(e -> System.exit(0));
+        menu1.add(mi3);
     }
 
     public static void lanzarApp() {
@@ -41,10 +47,6 @@ public class MainWindow implements ActionListener {
 
         // Maximizar Ventana Principal
         mainWindow.Ventana.setExtendedState(MAXIMIZED_BOTH);
-
-        //TEMPORAL
-        Certificacion.LanzarCertificacion();
-
     }
 
     @Override

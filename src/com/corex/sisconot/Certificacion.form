@@ -247,7 +247,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="3d419" class="javax.swing.JTextField" binding="Cod_Primero_CN">
                                     <constraints>
@@ -295,7 +301,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="7cbe1" class="javax.swing.JTextField" binding="Cod_Primero_MTC">
                                     <constraints>
@@ -343,7 +355,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="fd2ff" class="javax.swing.JTextField" binding="Cod_Primero_LCC">
                                     <constraints>
@@ -391,7 +409,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="b85fb" class="javax.swing.JTextField" binding="Cod_Primero_MAT">
                                     <constraints>
@@ -449,7 +473,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="b8f67" class="javax.swing.JTextField" binding="Cod_Tercero_CN">
                                     <constraints>
@@ -497,7 +527,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="44b64" class="javax.swing.JTextField" binding="Cod_Tercero_MTC">
                                     <constraints>
@@ -545,7 +581,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="6670d" class="javax.swing.JTextField" binding="Cod_Tercero_MAT">
                                     <constraints>
@@ -593,7 +635,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="78437" class="javax.swing.JTextField" binding="Cod_Tercero_LCC">
                                     <constraints>
@@ -651,7 +699,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="16c2f" class="javax.swing.JTextField" binding="Cod_Segundo_CN">
                                     <constraints>
@@ -699,7 +753,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="2bae1" class="javax.swing.JTextField" binding="Cod_Segundo_MTC">
                                     <constraints>
@@ -747,7 +807,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="32e46" class="javax.swing.JTextField" binding="Cod_Segundo_MAT">
                                     <constraints>
@@ -795,7 +861,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="9e73d" class="javax.swing.JTextField" binding="Cod_Segundo_LCC">
                                     <constraints>
@@ -863,7 +935,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="a682c" class="javax.swing.JTextField" binding="Cod_Cuarto_CN">
                                     <constraints>
@@ -911,7 +989,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="c83a6" class="javax.swing.JTextField" binding="Cod_Cuarto_MTC">
                                     <constraints>
@@ -959,7 +1043,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="93f2b" class="javax.swing.JTextField" binding="Cod_Cuarto_LCC">
                                     <constraints>
@@ -1007,7 +1097,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="81889" class="javax.swing.JTextField" binding="Cod_Cuarto_MAT">
                                     <constraints>
@@ -1065,7 +1161,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="75afa" class="javax.swing.JTextField" binding="Cod_Sexto_CN">
                                     <constraints>
@@ -1113,7 +1215,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="3b7ab" class="javax.swing.JTextField" binding="Cod_Sexto_MTC">
                                     <constraints>
@@ -1161,7 +1269,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="f7ce5" class="javax.swing.JTextField" binding="Cod_Sexto_MAT">
                                     <constraints>
@@ -1209,7 +1323,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="ae6e3" class="javax.swing.JTextField" binding="Cod_Sexto_LCC">
                                     <constraints>
@@ -1267,7 +1387,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="e5b7f" class="javax.swing.JTextField" binding="Cod_Quinto_CN">
                                     <constraints>
@@ -1315,7 +1441,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="1e530" class="javax.swing.JTextField" binding="Cod_Quinto_MTC">
                                     <constraints>
@@ -1363,7 +1495,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="b3aa4" class="javax.swing.JTextField" binding="Cod_Quinto_MAT">
                                     <constraints>
@@ -1411,7 +1549,13 @@
                                     <constraints>
                                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
-                                    <properties/>
+                                    <properties>
+                                      <model>
+                                        <item value="F"/>
+                                        <item value="R"/>
+                                        <item value="E"/>
+                                      </model>
+                                    </properties>
                                   </component>
                                   <component id="6c2b8" class="javax.swing.JTextField" binding="Cod_Quinto_LCC">
                                     <constraints>
