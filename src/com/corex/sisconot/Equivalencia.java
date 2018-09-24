@@ -1,7 +1,5 @@
 package com.corex.sisconot;
 
-import com.sun.xml.internal.ws.encoding.policy.MtomPolicyMapConfigurator;
-
 import java.awt.image.AreaAveragingScaleFilter;
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -112,13 +110,17 @@ public class Equivalencia {
             } else if (Mencion.equals("Diversificado")) {
                 PosicionesDeDependencias.add(new int[] {5, 7, 14});
                 PosicionesDeDependencias.add(new int[] {12, 14});
-                PosicionesDeDependencias.add(new int[] {12, 14});
+                //PosicionesDeDependencias.add(new int[] {12, 14});
             }
         } else if (NombreDelArea.equals("CN")) {
             if (Mencion.equals("Basica")) {
-                //
+                PosicionesDeDependencias.add(new int[] {6});
+                PosicionesDeDependencias.add(new int[] {6});
+                PosicionesDeDependencias.add(new int[] {6, 7, 8});
             } else if (Mencion.equals("Diversificado")) {
-                //
+                PosicionesDeDependencias.add(new int[] {8, 9, 10});
+                PosicionesDeDependencias.add(new int[] {8, 9, 10, 13});
+                //PosicionesDeDependencias.add(new int[] {6, 7, 8});
             }
         }
         return PosicionesDeDependencias;
@@ -126,13 +128,25 @@ public class Equivalencia {
 
     private ArrayList<ArrayList<String[]>> VerificarCuantasTieneAprobadas(ArrayList<ArrayList<String[]>> DependenciasDelPeriodo) {
         ArrayList<ArrayList<String[]>> Aprobadas = new ArrayList<>();
+        //System.out.println("Verificar cuantas dependencias de este periodo estan aprobadas");
+        for (int i=0; i<DependenciasDelPeriodo.size(); i++) {
+            ArrayList<String[]> SemestresDeLaDependencia = DependenciasDelPeriodo.get(i);
+            String[] PromedioDeLaDependencia = PromediarSemestres(SemestresDeLaDependencia.get(0), SemestresDeLaDependencia.get(1));
+            // Verificar si esta dependencia esta aprobada
+            int NotaDelPromedio = Integer.parseInt(PromedioDeLaDependencia[0]);
+            //System.out.println("Nota del Promedio" + NotaDelPromedio);
+            if (NotaDelPromedio > 9) {
+                Aprobadas.add(SemestresDeLaDependencia);
+            }
+        }
+
         return Aprobadas;
     }
 
     private String[] EvaluarDatosDeAprobacion(ArrayList<String[]> MateriasAEvaluar) {
-        String[] DatosDeAprobacion = new String[] {"", "", ""};
+        String[] DatosDeAprobacion = new String[] {"0", "", "", ""};
 
-        int Año = 0, Mes = 0, TipoDeEvaluacion = 0, PosicionDeLosDatosDeAprobacion = 0;
+        int Año = 0, Mes = 0, TipoDeEvaluacion = 0, PosicionDeLosDatosDeAprobacion = -1;
         for (int i=0; i<MateriasAEvaluar.size(); i++) {
             String[] MateriaAEvaluar = MateriasAEvaluar.get(i);
 
@@ -146,6 +160,9 @@ public class Equivalencia {
                         TipoDeAprobacionAEvaluar = 1;
                         break;
                     case "X":
+                        TipoDeAprobacionAEvaluar = 2;
+                        break;
+                    case "E":
                         TipoDeAprobacionAEvaluar = 2;
                         break;
                     case "R":
@@ -170,6 +187,10 @@ public class Equivalencia {
                 continue;
             }
 
+        }
+
+        if (PosicionDeLosDatosDeAprobacion != -1) {
+            return MateriasAEvaluar.get(PosicionDeLosDatosDeAprobacion);
         }
         return DatosDeAprobacion;
     }
@@ -200,21 +221,75 @@ public class Equivalencia {
         return MateriaEnPeriodos;
     }
 
+    private String[] PromedioDeMateriasConDependencias(ArrayList<ArrayList<String[]>> DependenciasDelPeriodo) {
+        String[] PeriodoTransferido = new String[4];
+
+        int SumatoriaNotasDeLaIzquierda = 0, SumatoriaNotasDeLaDerecha = 0;
+        ArrayList<String[]> DatosDeAprobacionAEvaluar = new ArrayList<>();
+        for (int i=0; i<DependenciasDelPeriodo.size(); i++) {
+            ArrayList<String[]> SemestresDeLaDependencia = DependenciasDelPeriodo.get(i);
+
+            String[] SemestreIzquierdo = SemestresDeLaDependencia.get(0);
+            String[] SemestreDerecho = SemestresDeLaDependencia.get(1);
+
+            SumatoriaNotasDeLaIzquierda += Integer.parseInt(SemestreIzquierdo[0]);
+            SumatoriaNotasDeLaDerecha += Integer.parseInt(SemestreDerecho[0]);
+
+            DatosDeAprobacionAEvaluar.add(SemestreDerecho);
+        }
+
+        PeriodoTransferido = EvaluarDatosDeAprobacion(DatosDeAprobacionAEvaluar);
+
+        PeriodoTransferido[0] = String.valueOf((SumatoriaNotasDeLaIzquierda / DependenciasDelPeriodo.size() + SumatoriaNotasDeLaDerecha / DependenciasDelPeriodo.size()) / 2);
+
+        return PeriodoTransferido;
+    }
+
     private String[] TransferirMateriaConDependencia(String Mencion, ArrayList<ArrayList<String[]>> Dependencias) {
         // Equivalencia del periodo del area con las dependencias recibidas
-        String[] Periodo = new String[4];
+        String[] PeriodoTransferido = new String[4];
 
         // Verificar posibilidad de exonerar
         if (Dependencias.size() >= 3) {
             // Verificar cuantas dependencias tiene aprobadas (para promediar por esa cantidad)
             ArrayList<ArrayList<String[]>> MateriasAprobadas = VerificarCuantasTieneAprobadas(Dependencias);
-            if (MateriasAprobadas.size() == (Dependencias.size() - 1)) {
-                System.out.println("Se puede promediar");
-            } else {
-                System.out.println("No puede promediar");
-            }
+            if (MateriasAprobadas.size() == (Dependencias.size() - 1)) { PeriodoTransferido = PromedioDeMateriasConDependencias(MateriasAprobadas); }
+            else { PeriodoTransferido = PromedioDeMateriasConDependencias(Dependencias); }
+        } else {
+            PeriodoTransferido = PromedioDeMateriasConDependencias(Dependencias);
         }
-        return Periodo;
+        return PeriodoTransferido;
+    }
+
+    private ArrayList<String[]> TransferirUltimosDeDiversificado(ArrayList<ArrayList<String[]>> Dependencias) {
+        ArrayList<String[]> QuintoYSextoPeriodo = new ArrayList<>();
+
+        int SumatoriaNotasDelQuinto = 0, SumatoriaNotasDelSexto = 0;
+        ArrayList<String[]> DatosDeAprobacionDelQuinto = new ArrayList<>();
+        ArrayList<String[]> DatosDeAprobacionDelSexto = new ArrayList<>();
+        for (int i=0; i<Dependencias.size(); i++) {
+            ArrayList<String[]> SemestresDeLaDependencia = Dependencias.get(i);
+
+            String[] SemestreIzquierdo = SemestresDeLaDependencia.get(0);
+            String[] SemestreDerecho = SemestresDeLaDependencia.get(1);
+
+            SumatoriaNotasDelQuinto += Integer.parseInt(SemestreIzquierdo[0]);
+            SumatoriaNotasDelSexto += Integer.parseInt(SemestreDerecho[0]);
+
+            DatosDeAprobacionDelQuinto.add(SemestreIzquierdo);
+            DatosDeAprobacionDelSexto.add(SemestreDerecho);
+        }
+
+        String[] ResultadoDelQuinto = EvaluarDatosDeAprobacion(DatosDeAprobacionDelQuinto);
+        String[] ResultadoDelSexto = EvaluarDatosDeAprobacion(DatosDeAprobacionDelSexto);
+
+        ResultadoDelQuinto[0] = String.valueOf(SumatoriaNotasDelQuinto / Dependencias.size());
+        ResultadoDelSexto[0] = String.valueOf(SumatoriaNotasDelSexto / Dependencias.size());
+
+        QuintoYSextoPeriodo.add(ResultadoDelQuinto);
+        QuintoYSextoPeriodo.add(ResultadoDelSexto);
+
+        return QuintoYSextoPeriodo;
     }
 
     //----------------------------------Extraccion de Materias--------------------------------------------------------//
@@ -231,50 +306,64 @@ public class Equivalencia {
         int inicio = 0;
         int fin = 12;
         ArrayList<String[]> Materia = new ArrayList<String[]>();
+
         for (int i=0; i<NroSemestres; i++) {
-            Materia.add(SepararMateria(record.substring(inicio, fin)));
+            try {
+                Materia.add(SepararMateria(record.substring(inicio, fin)));
+            } catch (StringIndexOutOfBoundsException e) {
+                Materia.add(SepararMateria(""));
+            }
             inicio += 12;
             fin += 12;
         }
         return Materia;
     }
 
+    // ABSTRAER BUCLE EN FUNCIONES
     private ArrayList<ArrayList<ArrayList<String[]>>> ExtraerDependenciasDelArea(String Mencion, String NombreDelArea, Object[] record) {
         ArrayList<int[]> PosicionesDeLasDependencias = ObtenerPosicionesDeDependencias(Mencion, NombreDelArea);
         int NroDePeriodos = ((Mencion.equals("Basica") ? 3 : 2));
-        ArrayList<ArrayList<ArrayList<String[]>>> DependenciasDeLaMencion = new ArrayList<>();
 
-        ArrayList<ArrayList<String[]>> DependenciasDelPeriodo = new ArrayList<>();
+        ArrayList<ArrayList<ArrayList<String[]>>> DependenciasDelPeriodo = new ArrayList<>();
         // Sacar dependencias de los 3 periodos de la mencion
         int inicioDeRecorteDelSemestre = 0, finDeRecorteDelSemestre = 12;
 
-        System.out.println(Mencion);
+        //System.out.println(Mencion);
         for (int i=0; i<NroDePeriodos; i++) {
 
-            System.out.println("Periodo: "+(i+1));
+            //System.out.println("Periodo: "+(i+1));
             int[] PosicionesDeLaDependencia = PosicionesDeLasDependencias.get(i);
 
             // Sacar el nro de dependencias correpondientes
             int inicioDelCorte = inicioDeRecorteDelSemestre, finDelCorte = finDeRecorteDelSemestre;
-            ArrayList<String[]> SemestresDeLaDependencia = new ArrayList<>();
+            ArrayList<ArrayList<String[]>> Dependencia = new ArrayList<>();
+            //System.out.println("Nro de dependencias del periodo: " + PosicionesDeLaDependencia.length);
             for (int j=0; j<PosicionesDeLaDependencia.length; j++) {
-
-                System.out.println("  Posicion de la Dependencia: "+(j+1)+"=> "+PosicionesDeLaDependencia[j]);
+                //System.out.println("  Posicion de la Dependencia: "+(j+1)+"=> "+PosicionesDeLaDependencia[j]);
                 // Sacar y cortar el registro de la dependencia en los semestre correspondiente
                 String RegistroCompletoDeLaDependencia = record[PosicionesDeLaDependencia[j]].toString();
 
                 String[] SemestreDeLaDependencia;
+                ArrayList<String[]> SemestresDeLaDependencia = new ArrayList<>();
                 for (int k=0; k<2; k++) {
                     // Recortar semestre de la dependencia y separar datos
-                    System.out.println("    Start: "+inicioDelCorte+" End: "+finDelCorte);
-                    System.out.println("    Recorte Completo: "+RegistroCompletoDeLaDependencia);
+                    //System.out.println("    Start: "+inicioDelCorte+" End: "+finDelCorte);
+                    //System.out.println("    Recorte Completo: "+RegistroCompletoDeLaDependencia);
 
+                    // Verificar si el campo del record esta vacio
                     String SemestreASeparar = "";
                     if (RegistroCompletoDeLaDependencia.equals("")) { SemestreASeparar = ""; }
-                    else { SemestreASeparar = RegistroCompletoDeLaDependencia.substring(inicioDelCorte, finDelCorte); }
+                    else {
+                        // Retornando sin datos si el semestres esta vacio (no se puede recortar hasta alli)
+                        try {
+                            SemestreASeparar = RegistroCompletoDeLaDependencia.substring(inicioDelCorte, finDelCorte);
+                        } catch (StringIndexOutOfBoundsException e) {
+                            SemestreASeparar = "";
+                        }
+                    }
 
                     SemestreDeLaDependencia = SepararMateria(SemestreASeparar);
-                    System.out.println("        Ya separado: "+SemestreDeLaDependencia[0]+" "+SemestreDeLaDependencia[1]+" "+SemestreDeLaDependencia[2]+" "+SemestreDeLaDependencia[3]);
+                    //System.out.println("        Ya separado: "+SemestreDeLaDependencia[0]+" "+SemestreDeLaDependencia[1]+" "+SemestreDeLaDependencia[2]+" "+SemestreDeLaDependencia[3]);
 
                     SemestresDeLaDependencia.add(SemestreDeLaDependencia);
                     // Cortar el semestre posterior
@@ -285,87 +374,88 @@ public class Equivalencia {
                 inicioDelCorte -= 24;
                 finDelCorte -= 24;
                 // Guardar Dependencias del periodo
-                DependenciasDelPeriodo.add(SemestresDeLaDependencia);
+                Dependencia.add(SemestresDeLaDependencia);
             }
             // Cortar semestres del siguiente periodo
             inicioDeRecorteDelSemestre += 24;
             finDeRecorteDelSemestre += 24;
             // Guardar Semestres de la dependencias
-            DependenciasDeLaMencion.add(DependenciasDelPeriodo);
+            DependenciasDelPeriodo.add(Dependencia);
         }
-        return DependenciasDeLaMencion;
+        return DependenciasDelPeriodo;
     }
 
     //----------------------------------Iniciar Equivalencias---------------------------------------------------------//
 
     private void HacerEquivalencia(String mencion, Object[] record) {
         // Castellano -> LCC
-        /*ArrayList<String[]> Castellano = ExtraerMateria(mencion, record[3].toString());
+        ArrayList<String[]> Castellano = ExtraerMateria(mencion, record[3].toString());
         ArrayList<String[]> LCC = TransferirMateriaSinDependencias(mencion, Castellano);
         LCC = TransferirEscalaDeNotas(LCC);
-        GuardarMateria(mencion,"LCC", LCC);*/
-
+        GuardarMateria(mencion,"LCC", LCC);
+        //-----------------------------------------------------------------------------------------------------------------------//
         // Matematica -> MAT (Todos los periodos)
-        /*int PosicionEnElRecord = ((mencion == "Basica")?5:4);
+        int PosicionEnElRecord = ((mencion == "Basica")?5:4);
         ArrayList<String[]> Matematica = ExtraerMateria(mencion, record[PosicionEnElRecord].toString());
         ArrayList<String[]> MAT = TransferirMateriaSinDependencias(mencion, Matematica);
         MAT = TransferirEscalaDeNotas(MAT);
-        GuardarMateria(mencion,"MAT", MAT);*/
-
+        GuardarMateria(mencion,"MAT", MAT);
+        //-----------------------------------------------------------------------------------------------------------------------//
         // Historias -> MTC
         ArrayList<String[]> MTC = new ArrayList<>();
         ArrayList<ArrayList<ArrayList<String[]>>> Dependencias = ExtraerDependenciasDelArea(mencion, "MTC", record);
-        /*for (int i=0; i<Dependencias.size(); i++) {
+        for (int i=0; i<Dependencias.size(); i++) {
             // Hacer equivalencia del periodo del area
             ArrayList<ArrayList<String[]>> DependenciasDelPeriodo = Dependencias.get(i);
-            String[] EquivalenciaDelPeriodo = TransferirMateriaConDependencia(mencion, DependenciasDelPeriodo);
-            MTC.add(EquivalenciaDelPeriodo);
-        }*/
-        /*MAT = TransferirEscalaDeNotas(MAT);
-        GuardarMateria(mencion,"MAT", MAT);*/
-
-
-
-        for (int i=0; i<Dependencias.size(); i++) {
-            System.out.println((i+1) + " Periodo");
-            ArrayList<ArrayList<String[]>> Dependencia = Dependencias.get(i);
-            for (int j=0; j<Dependencia.size(); j++) {
-                System.out.println(" " + (j+1) + " Materia");
-                ArrayList<String[]> Materias = Dependencia.get(j);
-                for (int k=0; k<2; k++) {
-                    String[] Semestre = Materias.get(k);
-                    System.out.println("  " + (k+1) + " Semestre");
-                    System.out.println("   " + "Nota: " + Semestre[0] + " Tipo E: " + Semestre[1] + " Fecha: " + Semestre[2] + " Cod_Plantel: " + Semestre[3]);
-                }
+            if (mencion == "Diversificado" && i == 1) {
+                // Transformar el 3 y 4 semestre a Quinto y Sexto Periodo
+                ArrayList<String[]> QuintoYSextoPeriodo = TransferirUltimosDeDiversificado(DependenciasDelPeriodo);
+                MTC.add(QuintoYSextoPeriodo.get(0));
+                MTC.add(QuintoYSextoPeriodo.get(1));
+            } else {
+                String[] EquivalenciaDelPeriodo = TransferirMateriaConDependencia(mencion, DependenciasDelPeriodo);
+                MTC.add(EquivalenciaDelPeriodo);
             }
+
         }
+        MTC = TransferirEscalaDeNotas(MTC);
+        GuardarMateria(mencion,"MTC", MTC);
+        //-----------------------------------------------------------------------------------------------------------------------//
+        // Ciencias -> CN
+        ArrayList<String[]> CN = new ArrayList<>();
+        Dependencias = ExtraerDependenciasDelArea(mencion, "CN", record);
+        for (int i=0; i<Dependencias.size(); i++) {
+            // Hacer equivalencia del periodo del area
+            ArrayList<ArrayList<String[]>> DependenciasDelPeriodo = Dependencias.get(i);
+            if (mencion == "Diversificado" && i == 1) {
+                // Transformar el 3 y 4 semestre a Quinto y Sexto Periodo
+                ArrayList<String[]> QuintoYSextoPeriodo = TransferirUltimosDeDiversificado(DependenciasDelPeriodo);
+                CN.add(QuintoYSextoPeriodo.get(0));
+                CN.add(QuintoYSextoPeriodo.get(1));
+            } else {
+                String[] EquivalenciaDelPeriodo = TransferirMateriaConDependencia(mencion, DependenciasDelPeriodo);
+                CN.add(EquivalenciaDelPeriodo);
+            }
 
-        //ArrayList<String[]> MTC = TransferirMateriaConDependencia(mencion, Dependencias);
-        //MTC = TransferirEscalaDeNotas(MTC);
-        //GuardarMateria(mencion,"MTC", MTC);
-
-        // Ciencias -> CN (Todos los periodos)
-        /*ArrayList<String[]> CN = EquivalenciaDeCN(mencion, record);
+        }
         CN = TransferirEscalaDeNotas(CN);
-        GuardarMateria(mencion,"CN", CN);*/
+        GuardarMateria(mencion,"CN", CN);
     }
 
     public Equivalencia() {
-        //PROBAR RECORD CON HUECOS
-        //PROBAR NOTAS BAJAS
-        dbf.BuscarNotas("V-28086285"); //ABSTRAER
+        dbf.BuscarNotas("V-28086285"); //ABSTRAER  V-28086285
 
         Notas.LlenarAreasSinDatos();
 
         if (Notas.recordBasica != null) {
-            //HacerEquivalencia("Basica", Notas.recordBasica);
+            HacerEquivalencia("Basica", Notas.recordBasica);
         }
         if (Notas.recordDiversificado != null) {
             HacerEquivalencia("Diversificado", Notas.recordDiversificado);
         }
 
         //VER NUEVO RECORD (TEMPORAL)
-        /*String[] NombresMuestra = new String[] {"LCC", "MAT", "MTC", "CN"};
+        String[] NombresMuestra = new String[] {"LCC", "MAT", "MTC", "CN"};
         for (int i=0; i<4; i++) {
             System.out.println(NombresMuestra[i]);
             ArrayList<String[]> Area = Notas.Areas.get(i);
@@ -373,15 +463,6 @@ public class Equivalencia {
                 String[] DatosDelArea = Area.get(j);
                 System.out.println("Nota: " + DatosDelArea[0] + " TE: " + DatosDelArea[1] + " Fecha: " + DatosDelArea[2] + " Cod: " + DatosDelArea[3]);
             }
-        }*/
+        }
     }
 }
-
-
-/*
-System.out.println(Mencion);
-for (int i=0; i<3; i++) {
-    String[] Datos = Area.get(i);
-    System.out.println(Datos[0] + " " + Datos[1] + " " +  Datos[2] + " " + Datos[3]);
-}
-*/
