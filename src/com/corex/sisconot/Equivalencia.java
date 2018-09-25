@@ -88,10 +88,10 @@ public class Equivalencia {
     private String[] PromediarSemestres(String[] SemestreIzquierdo, String[] SemestreDerecho) {
         String[] DatosDeLaEquivalencia = new String[4];
 
-        System.out.println("Promediar semestres");
+        //System.out.println("Promediar semestres");
         if (SemestreIzquierdo[0].equals("")) { SemestreIzquierdo[0] = "0"; }
         if (SemestreDerecho[0].equals("")) { SemestreDerecho[0] = "0"; }
-        System.out.println("Izq =>" + SemestreIzquierdo[0] + " " + SemestreDerecho[0]);
+        //System.out.println("Izq =>" + SemestreIzquierdo[0] + " " + SemestreDerecho[0]);
         // Nota del Periodo
         DatosDeLaEquivalencia[0] = (int) Math.ceil((Double.parseDouble(SemestreIzquierdo[0]) + Double.parseDouble(SemestreDerecho[0])) / 2)+"";
         // Tipo de Evaluacion del Periodo
@@ -392,16 +392,16 @@ public class Equivalencia {
     //----------------------------------Iniciar Equivalencias---------------------------------------------------------//
 
     private void HacerEquivalencia(String mencion, Object[] record) {
-        System.out.println(mencion);
+        //System.out.println(mencion);
         // Castellano -> LCC
-        System.out.println("LCC");
+        //System.out.println("LCC");
         ArrayList<String[]> Castellano = ExtraerMateria(mencion, record[3].toString());
         ArrayList<String[]> LCC = TransferirMateriaSinDependencias(mencion, Castellano);
         LCC = TransferirEscalaDeNotas(LCC);
         GuardarMateria(mencion,"LCC", LCC);
         //-----------------------------------------------------------------------------------------------------------------------//
         // Matematica -> MAT (Todos los periodos)
-        System.out.println("MAT");
+        //System.out.println("MAT");
         int PosicionEnElRecord = ((mencion == "Basica")?5:4);
         ArrayList<String[]> Matematica = ExtraerMateria(mencion, record[PosicionEnElRecord].toString());
         ArrayList<String[]> MAT = TransferirMateriaSinDependencias(mencion, Matematica);
@@ -409,7 +409,7 @@ public class Equivalencia {
         GuardarMateria(mencion,"MAT", MAT);
         //-----------------------------------------------------------------------------------------------------------------------//
         // Historias -> MTC
-        System.out.println("MTC");
+        //System.out.println("MTC");
         ArrayList<String[]> MTC = new ArrayList<>();
         ArrayList<ArrayList<ArrayList<String[]>>> Dependencias = ExtraerDependenciasDelArea(mencion, "MTC", record);
         for (int i=0; i<Dependencias.size(); i++) {
@@ -430,7 +430,7 @@ public class Equivalencia {
         GuardarMateria(mencion,"MTC", MTC);
         //-----------------------------------------------------------------------------------------------------------------------//
         // Ciencias -> CN
-        System.out.println("CN");
+        //System.out.println("CN");
         ArrayList<String[]> CN = new ArrayList<>();
         Dependencias = ExtraerDependenciasDelArea(mencion, "CN", record);
         for (int i=0; i<Dependencias.size(); i++) {
@@ -463,15 +463,5 @@ public class Equivalencia {
             HacerEquivalencia("Diversificado", Notas.recordDiversificado);
         }
 
-        //VER NUEVO RECORD (TEMPORAL)
-        String[] NombresMuestra = new String[] {"LCC", "MAT", "MTC", "CN"};
-        for (int i=0; i<4; i++) {
-            System.out.println(NombresMuestra[i]);
-            ArrayList<String[]> Area = Notas.Areas.get(i);
-            for (int j=0; j<6; j++) {
-                String[] DatosDelArea = Area.get(j);
-                System.out.println("Nota: " + DatosDelArea[0] + " TE: " + DatosDelArea[1] + " Fecha: " + DatosDelArea[2] + " Cod: " + DatosDelArea[3]);
-            }
-        }
     }
 }

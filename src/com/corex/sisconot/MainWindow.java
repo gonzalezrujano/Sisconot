@@ -47,6 +47,8 @@ public class MainWindow implements ActionListener {
 
         // Maximizar Ventana Principal
         mainWindow.Ventana.setExtendedState(MAXIMIZED_BOTH);
+
+        Certificacion.LanzarCertificacion(); //TEMPORAL
     }
 
     @Override

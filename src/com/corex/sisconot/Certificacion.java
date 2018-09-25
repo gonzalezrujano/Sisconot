@@ -23,121 +23,20 @@ public class Certificacion extends JDialog {
     private JTabbedPane tabbedPane1;
     private JButton imprimirButton;
     private JButton vaciarButton;
-    private JLabel Label_Primero_LCC;
-    private JTextField Fecha_Primero_LCC;
-    private JSpinner Nota_Primero_LCC;
-    private JComboBox TE_Primero_LCC;
-    private JTextField Cod_Primero_LCC;
-    private JTextField Fecha_Primero_MTC;
-    private JSpinner Nota_Primero_MTC;
-    private JComboBox TE_Primero_MTC;
-    private JTextField Cod_Primero_MTC;
-    private JTextField Fecha_Primero_CN;
-    private JSpinner Nota_Primero_CN;
-    private JComboBox TE_Primero_CN;
-    private JTextField Cod_Primero_CN;
-    private JTextField Fecha_Primero_MAT;
-    private JSpinner Nota_Primero_MAT;
-    private JComboBox TE_Primero_MAT;
-    private JTextField Cod_Primero_MAT;
-    private JTextField Fecha_Tercero_CN;
-    private JSpinner Nota_Tercero_CN;
-    private JComboBox TE_Tercero_CN;
-    private JTextField Cod_Tercero_CN;
-    private JTextField Fecha_Tercero_MTC;
-    private JSpinner Nota_Tercero_MTC;
-    private JComboBox TE_Tercero_MTC;
-    private JTextField Cod_Tercero_MTC;
-    private JTextField Fecha_Tercero_MAT;
-    private JSpinner Nota_Tercero_MAT;
-    private JComboBox TE_Tercero_MAT;
-    private JTextField Cod_Tercero_MAT;
-    private JTextField Fecha_Tercero_LCC;
-    private JSpinner Nota_Tercero_LCC;
-    private JComboBox TE_Tercero_LCC;
-    private JTextField Cod_Tercero_LCC;
-    private JTextField Fecha_Segundo_CN;
-    private JSpinner Nota_Segundo_CN;
-    private JComboBox TE_Segundo_CN;
-    private JTextField Cod_Segundo_CN;
-    private JTextField Fecha_Segundo_MTC;
-    private JSpinner Nota_Segundo_MTC;
-    private JComboBox TE_Segundo_MTC;
-    private JTextField Cod_Segundo_MTC;
-    private JTextField Fecha_Segundo_MAT;
-    private JSpinner Nota_Segundo_MAT;
-    private JComboBox TE_Segundo_MAT;
-    private JTextField Cod_Segundo_MAT;
-    private JTextField Fecha_Segundo_LCC;
-    private JSpinner Nota_Segundo_LCC;
-    private JComboBox TE_Segundo_LCC;
-    private JTextField Cod_Segundo_LCC;
-    private JTextField Fecha_Cuarto_CN;
-    private JSpinner Nota_Cuarto_CN;
-    private JComboBox TE_Cuarto_CN;
-    private JTextField Cod_Cuarto_CN;
-    private JTextField Fecha_Cuarto_MTC;
-    private JSpinner Nota_Cuarto_MTC;
-    private JComboBox TE_Cuarto_MTC;
-    private JTextField Cod_Cuarto_MTC;
-    private JTextField Fecha_Cuarto_LCC;
-    private JSpinner Nota_Cuarto_LCC;
-    private JComboBox TE_Cuarto_LCC;
-    private JTextField Cod_Cuarto_LCC;
-    private JTextField Fecha_Cuarto_MAT;
-    private JSpinner Nota_Cuarto_MAT;
-    private JComboBox TE_Cuarto_MAT;
-    private JTextField Cod_Cuarto_MAT;
-    private JTextField Fecha_Sexto_CN;
-    private JSpinner Nota_Sexto_CN;
-    private JComboBox TE_Sexto_CN;
-    private JTextField Cod_Sexto_CN;
-    private JTextField Fecha_Sexto_MTC;
-    private JSpinner Nota_Sexto_MTC;
-    private JComboBox TE_Sexto_MTC;
-    private JTextField Cod_Sexto_MTC;
-    private JTextField Fecha_Sexto_MAT;
-    private JSpinner Nota_Sexto_MAT;
-    private JComboBox TE_Sexto_MAT;
-    private JTextField Cod_Sexto_MAT;
-    private JTextField Fecha_Sexto_LCC;
-    private JSpinner Nota_Sexto_LCC;
-    private JComboBox TE_Sexto_LCC;
-    private JTextField Cod_Sexto_LCC;
-    private JTextField Fecha_Quinto_CN;
-    private JSpinner Nota_Quinto_CN;
-    private JComboBox TE_Quinto_CN;
-    private JTextField Cod_Quinto_CN;
-    private JTextField Fecha_Quinto_MTC;
-    private JSpinner Nota_Quinto_MTC;
-    private JComboBox TE_Quinto_MTC;
-    private JTextField Cod_Quinto_MTC;
-    private JTextField Fecha_Quinto_MAT;
-    private JSpinner Nota_Quinto_MAT;
-    private JComboBox TE_Quinto_MAT;
-    private JTextField Cod_Quinto_MAT;
-    private JTextField Fecha_Quinto_LCC;
-    private JSpinner Nota_Quinto_LCC;
-    private JComboBox TE_Quinto_LCC;
-    private JTextField Cod_Quinto_LCC;
-    public static String Test = "ssss";
+    private JPanel ContenedorDePeriodos;
 
     public Certificacion() {
+        //TEMPORAL
+        cedulaTextField.setText("13120813");
+
         // Definiciones de la Ventana
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buscarButton);
 
-        DefinirTipoDeDocumento();
         ColocarPlaceholdersEnTextField();
         AgregarEscuchaALosBotones();
         DefinirEventosDeSalida();
-    }
-
-    private void DefinirTipoDeDocumento() {
-        comboBox_Tipo_Cedula.addItem("V");
-        comboBox_Tipo_Cedula.addItem("E");
-        comboBox_Tipo_Cedula.addItem("C");
     }
 
     private void ColocarPlaceholdersEnTextField() {
@@ -152,6 +51,10 @@ public class Certificacion extends JDialog {
     private void AgregarEscuchaALosBotones() {
         buscarButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) { BuscarAlumno(); }
+        });
+
+        imprimirButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) { ImprimirCertificacion(); }
         });
 
         vaciarButton.addActionListener(new ActionListener() {
@@ -181,6 +84,8 @@ public class Certificacion extends JDialog {
     }
 
     private void BuscarAlumno() {
+        LimpiarDatos();
+
         String Tipo_Cedula = (String) comboBox_Tipo_Cedula.getSelectedItem();
         String Cedula = cedulaTextField.getText();
 
@@ -189,7 +94,7 @@ public class Certificacion extends JDialog {
         } else {
             Cedula = Tipo_Cedula + "-" + Cedula;
 
-            //BUSCAR PRIMERO EN SQL
+            //BUSCAR PRIMERO EN SQL!!! funcion normal
             if (false) {
                 MostrarDatosDelAlumno();
             }
@@ -219,281 +124,34 @@ public class Certificacion extends JDialog {
         ArrayList<String[]> Area;
         String[] Periodo;
 
-        // Area de LCC
-        Area = Notas.Areas.get(0);
 
-        // Primer periodo
-        Periodo = Area.get(0);
-        Nota_Primero_LCC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Primero_LCC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Primero_LCC.setText(Periodo[2]);
-        Cod_Primero_LCC.setText(Periodo[3]);
+        JPanel ContenedorDeBasica = (JPanel) ContenedorDePeriodos.getComponent(0);
+        JPanel ContenedorDeDiversificado = (JPanel) ContenedorDePeriodos.getComponent(1);
+        JPanel ContenedorDelPeriodo;
+        JPanel ContenedorDelArea;
 
-        // Segundo periodo
-        Periodo = Area.get(1);
-        Nota_Segundo_LCC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Segundo_LCC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Segundo_LCC.setText(Periodo[2]);
-        Cod_Segundo_LCC.setText(Periodo[3]);
+        for (int i=0; i<6; i++) {
 
-        // Tercer periodo
-        Periodo = Area.get(2);
-        Nota_Tercero_LCC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Tercero_LCC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Tercero_LCC.setText(Periodo[2]);
-        Cod_Tercero_LCC.setText(Periodo[3]);
+            if (i < 3) { ContenedorDelPeriodo = (JPanel) ContenedorDeBasica.getComponent(i); }
+            else { ContenedorDelPeriodo = (JPanel) ContenedorDeDiversificado.getComponent(i-3); }
 
-        // Cuarto periodo
-        Periodo = Area.get(3);
-        Nota_Cuarto_LCC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Cuarto_LCC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Cuarto_LCC.setText(Periodo[2]);
-        Cod_Cuarto_LCC.setText(Periodo[3]);
+            for (int j=0; j<4; j++) {
+                Area = Notas.Areas.get(j);
+                Periodo = Area.get(i);
 
-        // Quinto periodo
-        Periodo = Area.get(4);
-        Nota_Quinto_LCC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Quinto_LCC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Quinto_LCC.setText(Periodo[2]);
-        Cod_Quinto_LCC.setText(Periodo[3]);
+                ContenedorDelArea = (JPanel) ContenedorDelPeriodo.getComponent(j);
 
-        // Sexto periodo
-        Periodo = Area.get(5);
-        Nota_Sexto_LCC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Sexto_LCC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Sexto_LCC.setText(Periodo[2]);
-        Cod_Sexto_LCC.setText(Periodo[3]);
-        //-------------------------------------------------------------------------------------------------------------
+                JSpinner Nota = (JSpinner) ContenedorDelArea.getComponent(2);
+                JComboBox TipoEvaluacion = (JComboBox) ContenedorDelArea.getComponent(3);
+                JTextField FechaAprobacion = (JTextField) ContenedorDelArea.getComponent(1);
+                JTextField CodPlantel = (JTextField) ContenedorDelArea.getComponent(4);
 
-        // Area de MAT
-        Area = Notas.Areas.get(1);
-
-        // Primer periodo
-        Periodo = Area.get(0);
-        Nota_Primero_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Primero_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Primero_MAT.setText(Periodo[2]);
-        Cod_Primero_MAT.setText(Periodo[3]);
-
-        // Segundo periodo
-        Periodo = Area.get(1);
-        Nota_Segundo_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Segundo_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Segundo_MAT.setText(Periodo[2]);
-        Cod_Segundo_MAT.setText(Periodo[3]);
-
-        // Tercer periodo
-        Periodo = Area.get(2);
-        Nota_Tercero_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Tercero_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Tercero_MAT.setText(Periodo[2]);
-        Cod_Tercero_MAT.setText(Periodo[3]);
-
-        // Cuarto periodo
-        Periodo = Area.get(3);
-        Nota_Cuarto_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Cuarto_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Cuarto_MAT.setText(Periodo[2]);
-        Cod_Cuarto_MAT.setText(Periodo[3]);
-
-        // Quinto periodo
-        Periodo = Area.get(4);
-        Nota_Quinto_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Quinto_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Quinto_MAT.setText(Periodo[2]);
-        Cod_Quinto_MAT.setText(Periodo[3]);
-
-        // Sexto periodo
-        Periodo = Area.get(5);
-        Nota_Sexto_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Sexto_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Sexto_MAT.setText(Periodo[2]);
-        Cod_Sexto_MAT.setText(Periodo[3]);
-        //-------------------------------------------------------------------------------------------------------------
-
-        // Area de MAT
-        Area = Notas.Areas.get(1);
-
-        // Primer periodo
-        Periodo = Area.get(0);
-        Nota_Primero_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Primero_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Primero_MAT.setText(Periodo[2]);
-        Cod_Primero_MAT.setText(Periodo[3]);
-
-        // Segundo periodo
-        Periodo = Area.get(1);
-        Nota_Segundo_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Segundo_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Segundo_MAT.setText(Periodo[2]);
-        Cod_Segundo_MAT.setText(Periodo[3]);
-
-        // Tercer periodo
-        Periodo = Area.get(2);
-        Nota_Tercero_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Tercero_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Tercero_MAT.setText(Periodo[2]);
-        Cod_Tercero_MAT.setText(Periodo[3]);
-
-        // Cuarto periodo
-        Periodo = Area.get(3);
-        Nota_Cuarto_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Cuarto_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Cuarto_MAT.setText(Periodo[2]);
-        Cod_Cuarto_MAT.setText(Periodo[3]);
-
-        // Quinto periodo
-        Periodo = Area.get(4);
-        Nota_Quinto_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Quinto_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Quinto_MAT.setText(Periodo[2]);
-        Cod_Quinto_MAT.setText(Periodo[3]);
-
-        // Sexto periodo
-        Periodo = Area.get(5);
-        Nota_Sexto_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Sexto_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Sexto_MAT.setText(Periodo[2]);
-        Cod_Sexto_MAT.setText(Periodo[3]);
-        //-------------------------------------------------------------------------------------------------------------
-
-        // Area de MAT
-        Area = Notas.Areas.get(1);
-
-        // Primer periodo
-        Periodo = Area.get(0);
-        Nota_Primero_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Primero_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Primero_MAT.setText(Periodo[2]);
-        Cod_Primero_MAT.setText(Periodo[3]);
-
-        // Segundo periodo
-        Periodo = Area.get(1);
-        Nota_Segundo_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Segundo_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Segundo_MAT.setText(Periodo[2]);
-        Cod_Segundo_MAT.setText(Periodo[3]);
-
-        // Tercer periodo
-        Periodo = Area.get(2);
-        Nota_Tercero_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Tercero_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Tercero_MAT.setText(Periodo[2]);
-        Cod_Tercero_MAT.setText(Periodo[3]);
-
-        // Cuarto periodo
-        Periodo = Area.get(3);
-        Nota_Cuarto_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Cuarto_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Cuarto_MAT.setText(Periodo[2]);
-        Cod_Cuarto_MAT.setText(Periodo[3]);
-
-        // Quinto periodo
-        Periodo = Area.get(4);
-        Nota_Quinto_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Quinto_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Quinto_MAT.setText(Periodo[2]);
-        Cod_Quinto_MAT.setText(Periodo[3]);
-
-        // Sexto periodo
-        Periodo = Area.get(5);
-        Nota_Sexto_MAT.setValue(Integer.parseInt(Periodo[0]));
-        TE_Sexto_MAT.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Sexto_MAT.setText(Periodo[2]);
-        Cod_Sexto_MAT.setText(Periodo[3]);
-        //-------------------------------------------------------------------------------------------------------------
-
-        // Area de MTC
-        Area = Notas.Areas.get(2);
-
-        // Primer periodo
-        Periodo = Area.get(0);
-        Nota_Primero_MTC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Primero_MTC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Primero_MTC.setText(Periodo[2]);
-        Cod_Primero_MTC.setText(Periodo[3]);
-
-        // Segundo periodo
-        Periodo = Area.get(1);
-        Nota_Segundo_MTC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Segundo_MTC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Segundo_MTC.setText(Periodo[2]);
-        Cod_Segundo_MTC.setText(Periodo[3]);
-
-        // Tercer periodo
-        Periodo = Area.get(2);
-        Nota_Tercero_MTC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Tercero_MTC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Tercero_MTC.setText(Periodo[2]);
-        Cod_Tercero_MTC.setText(Periodo[3]);
-
-        // Cuarto periodo
-        Periodo = Area.get(3);
-        Nota_Cuarto_MTC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Cuarto_MTC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Cuarto_MTC.setText(Periodo[2]);
-        Cod_Cuarto_MTC.setText(Periodo[3]);
-
-        // Quinto periodo
-        Periodo = Area.get(4);
-        Nota_Quinto_MTC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Quinto_MTC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Quinto_MTC.setText(Periodo[2]);
-        Cod_Quinto_MTC.setText(Periodo[3]);
-
-        // Sexto periodo
-        Periodo = Area.get(5);
-        Nota_Sexto_MTC.setValue(Integer.parseInt(Periodo[0]));
-        TE_Sexto_MTC.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Sexto_MTC.setText(Periodo[2]);
-        Cod_Sexto_MTC.setText(Periodo[3]);
-        //-------------------------------------------------------------------------------------------------------------
-
-        // Area de MAT
-        Area = Notas.Areas.get(3);
-
-        // Primer periodo
-        Periodo = Area.get(0);
-        Nota_Primero_CN.setValue(Integer.parseInt(Periodo[0]));
-        TE_Primero_CN.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Primero_CN.setText(Periodo[2]);
-        Cod_Primero_CN.setText(Periodo[3]);
-
-        // Segundo periodo
-        Periodo = Area.get(1);
-        Nota_Segundo_CN.setValue(Integer.parseInt(Periodo[0]));
-        TE_Segundo_CN.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Segundo_CN.setText(Periodo[2]);
-        Cod_Segundo_CN.setText(Periodo[3]);
-
-        // Tercer periodo
-        Periodo = Area.get(2);
-        Nota_Tercero_CN.setValue(Integer.parseInt(Periodo[0]));
-        TE_Tercero_CN.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Tercero_CN.setText(Periodo[2]);
-        Cod_Tercero_CN.setText(Periodo[3]);
-
-        // Cuarto periodo
-        Periodo = Area.get(3);
-        Nota_Cuarto_CN.setValue(Integer.parseInt(Periodo[0]));
-        TE_Cuarto_CN.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Cuarto_CN.setText(Periodo[2]);
-        Cod_Cuarto_CN.setText(Periodo[3]);
-
-        // Quinto periodo
-        Periodo = Area.get(4);
-        Nota_Quinto_CN.setValue(Integer.parseInt(Periodo[0]));
-        TE_Quinto_CN.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Quinto_CN.setText(Periodo[2]);
-        Cod_Quinto_CN.setText(Periodo[3]);
-
-        // Sexto periodo
-        Periodo = Area.get(5);
-        Nota_Sexto_CN.setValue(Integer.parseInt(Periodo[0]));
-        TE_Sexto_CN.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
-        Fecha_Sexto_CN.setText(Periodo[2]);
-        Cod_Sexto_CN.setText(Periodo[3]);
-        //-------------------------------------------------------------------------------------------------------------
+                Nota.setValue(Integer.parseInt(Periodo[0]));
+                TipoEvaluacion.setSelectedIndex(DeterminarPosicionDeLaEvaluacion(Periodo[1]));
+                FechaAprobacion.setText(Periodo[2]);
+                CodPlantel.setText(Periodo[3]);
+            }
+        }
     }
 
     private int DeterminarPosicionDeLaEvaluacion(String Evaluacion) {
@@ -511,6 +169,71 @@ public class Certificacion extends JDialog {
         }
     }
 
+    private String DeterminarTipoDeEvaluacion(int Evaluacion) {
+        switch (Evaluacion) {
+            case 0:
+                return "F";
+            case 1:
+                return "R";
+            case 2:
+                return "E";
+            default:
+                return "F";
+        }
+    }
+
+    private void ImprimirCertificacion() {
+        System.out.println("Imprimir Certificacion");
+
+        ArrayList<String[]> Area;
+        String[] Periodo;
+
+
+        JPanel ContenedorDeBasica = (JPanel) ContenedorDePeriodos.getComponent(0);
+        JPanel ContenedorDeDiversificado = (JPanel) ContenedorDePeriodos.getComponent(1);
+        JPanel ContenedorDelPeriodo;
+        JPanel ContenedorDelArea;
+
+        for (int i=0; i<6; i++) {
+
+            if (i < 3) { ContenedorDelPeriodo = (JPanel) ContenedorDeBasica.getComponent(i); }
+            else { ContenedorDelPeriodo = (JPanel) ContenedorDeDiversificado.getComponent(i-3); }
+
+            for (int j=0; j<4; j++) {
+                Area = Notas.Areas.get(j);
+                Periodo = Area.get(i);
+
+                ContenedorDelArea = (JPanel) ContenedorDelPeriodo.getComponent(j);
+
+                JSpinner Nota = (JSpinner) ContenedorDelArea.getComponent(2);
+                JComboBox TipoEvaluacion = (JComboBox) ContenedorDelArea.getComponent(3);
+                JTextField FechaAprobacion = (JTextField) ContenedorDelArea.getComponent(1);
+                JTextField CodPlantel = (JTextField) ContenedorDelArea.getComponent(4);
+
+                Periodo[0] = String.valueOf(Nota.getValue());
+                Periodo[1] = (String) TipoEvaluacion.getSelectedItem();
+                Periodo[2] = FechaAprobacion.getText();
+                Periodo[3] = CodPlantel.getText();
+
+                Area.set(i, Periodo);
+                Notas.Areas.set(j, Area);
+            }
+        }
+
+
+
+        //VER NUEVO RECORD (TEMPORAL)
+        String[] NombresMuestra = new String[] {"LCC", "MAT", "MTC", "CN"};
+        for (int i=0; i<4; i++) {
+            System.out.println(NombresMuestra[i]);
+            ArrayList<String[]> Areaa = Notas.Areas.get(i);
+            for (int j=0; j<6; j++) {
+                String[] DatosDelArea = Areaa.get(j);
+                System.out.println("Nota: " + DatosDelArea[0] + " TE: " + DatosDelArea[1] + " Fecha: " + DatosDelArea[2] + " Cod: " + DatosDelArea[3]);
+            }
+        }
+    }
+
     private void LimpiarDatos() {
         Alumno.VaciarDatos();
         Notas.VaciarDatos();
@@ -521,186 +244,29 @@ public class Certificacion extends JDialog {
         lugarNacimientoTextField.setText("");
         entidadTextField.setText("");
 
-        Nota_Primero_LCC.setValue(0);
-        TE_Primero_LCC.setSelectedIndex(0);
-        Fecha_Primero_LCC.setText("");
-        Cod_Primero_LCC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Segundo_LCC.setValue(0);
-        TE_Segundo_LCC.setSelectedIndex(0);
-        Fecha_Segundo_LCC.setText("");
-        Cod_Segundo_LCC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Tercero_LCC.setValue(0);
-        TE_Tercero_LCC.setSelectedIndex(0);
-        Fecha_Tercero_LCC.setText("");
-        Cod_Tercero_LCC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Cuarto_LCC.setValue(0);
-        TE_Cuarto_LCC.setSelectedIndex(0);
-        Fecha_Cuarto_LCC.setText("");
-        Cod_Cuarto_LCC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Quinto_LCC.setValue(0);
-        TE_Quinto_LCC.setSelectedIndex(0);
-        Fecha_Quinto_LCC.setText("");
-        Cod_Quinto_LCC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Sexto_LCC.setValue(0);
-        TE_Sexto_LCC.setSelectedIndex(0);
-        Fecha_Sexto_LCC.setText("");
-        Cod_Sexto_LCC.setText("");
-        //-------------------------------------------------------------------------------------------------------------
-        Nota_Primero_MAT.setValue(0);
-        TE_Primero_MAT.setSelectedIndex(0);
-        Fecha_Primero_MAT.setText("");
-        Cod_Primero_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Segundo_MAT.setValue(0);
-        TE_Segundo_MAT.setSelectedIndex(0);
-        Fecha_Segundo_MAT.setText("");
-        Cod_Segundo_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Tercero_MAT.setValue(0);
-        TE_Tercero_MAT.setSelectedIndex(0);
-        Fecha_Tercero_MAT.setText("");
-        Cod_Tercero_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Cuarto_MAT.setValue(0);
-        TE_Cuarto_MAT.setSelectedIndex(0);
-        Fecha_Cuarto_MAT.setText("");
-        Cod_Cuarto_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Quinto_MAT.setValue(0);
-        TE_Quinto_MAT.setSelectedIndex(0);
-        Fecha_Quinto_MAT.setText("");
-        Cod_Quinto_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Sexto_MAT.setValue(0);
-        TE_Sexto_MAT.setSelectedIndex(0);
-        Fecha_Sexto_MAT.setText("");
-        Cod_Sexto_MAT.setText("");
-        //-------------------------------------------------------------------------------------------------------------
-        Nota_Primero_MAT.setValue(0);
-        TE_Primero_MAT.setSelectedIndex(0);
-        Fecha_Primero_MAT.setText("");
-        Cod_Primero_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Segundo_MAT.setValue(0);
-        TE_Segundo_MAT.setSelectedIndex(0);
-        Fecha_Segundo_MAT.setText("");
-        Cod_Segundo_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Tercero_MAT.setValue(0);
-        TE_Tercero_MAT.setSelectedIndex(0);
-        Fecha_Tercero_MAT.setText("");
-        Cod_Tercero_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Cuarto_MAT.setValue(0);
-        TE_Cuarto_MAT.setSelectedIndex(0);
-        Fecha_Cuarto_MAT.setText("");
-        Cod_Cuarto_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Quinto_MAT.setValue(0);
-        TE_Quinto_MAT.setSelectedIndex(0);
-        Fecha_Quinto_MAT.setText("");
-        Cod_Quinto_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Sexto_MAT.setValue(0);
-        TE_Sexto_MAT.setSelectedIndex(0);
-        Fecha_Sexto_MAT.setText("");
-        Cod_Sexto_MAT.setText("");
-        //-------------------------------------------------------------------------------------------------------------        
-        Nota_Primero_MAT.setValue(0);
-        TE_Primero_MAT.setSelectedIndex(0);
-        Fecha_Primero_MAT.setText("");
-        Cod_Primero_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Segundo_MAT.setValue(0);
-        TE_Segundo_MAT.setSelectedIndex(0);
-        Fecha_Segundo_MAT.setText("");
-        Cod_Segundo_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Tercero_MAT.setValue(0);
-        TE_Tercero_MAT.setSelectedIndex(0);
-        Fecha_Tercero_MAT.setText("");
-        Cod_Tercero_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Cuarto_MAT.setValue(0);
-        TE_Cuarto_MAT.setSelectedIndex(0);
-        Fecha_Cuarto_MAT.setText("");
-        Cod_Cuarto_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Quinto_MAT.setValue(0);
-        TE_Quinto_MAT.setSelectedIndex(0);
-        Fecha_Quinto_MAT.setText("");
-        Cod_Quinto_MAT.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Sexto_MAT.setValue(0);
-        TE_Sexto_MAT.setSelectedIndex(0);
-        Fecha_Sexto_MAT.setText("");
-        Cod_Sexto_MAT.setText("");
-        //-------------------------------------------------------------------------------------------------------------
-        Nota_Primero_MTC.setValue(0);
-        TE_Primero_MTC.setSelectedIndex(0);
-        Fecha_Primero_MTC.setText("");
-        Cod_Primero_MTC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Segundo_MTC.setValue(0);
-        TE_Segundo_MTC.setSelectedIndex(0);
-        Fecha_Segundo_MTC.setText("");
-        Cod_Segundo_MTC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Tercero_MTC.setValue(0);
-        TE_Tercero_MTC.setSelectedIndex(0);
-        Fecha_Tercero_MTC.setText("");
-        Cod_Tercero_MTC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Cuarto_MTC.setValue(0);
-        TE_Cuarto_MTC.setSelectedIndex(0);
-        Fecha_Cuarto_MTC.setText("");
-        Cod_Cuarto_MTC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Quinto_MTC.setValue(0);
-        TE_Quinto_MTC.setSelectedIndex(0);
-        Fecha_Quinto_MTC.setText("");
-        Cod_Quinto_MTC.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Sexto_MTC.setValue(0);
-        TE_Sexto_MTC.setSelectedIndex(0);
-        Fecha_Sexto_MTC.setText("");
-        Cod_Sexto_MTC.setText("");
-        //-------------------------------------------------------------------------------------------------------------
-        Nota_Primero_CN.setValue(0);
-        TE_Primero_CN.setSelectedIndex(0);
-        Fecha_Primero_CN.setText("");
-        Cod_Primero_CN.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Segundo_CN.setValue(0);
-        TE_Segundo_CN.setSelectedIndex(0);
-        Fecha_Segundo_CN.setText("");
-        Cod_Segundo_CN.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Tercero_CN.setValue(0);
-        TE_Tercero_CN.setSelectedIndex(0);
-        Fecha_Tercero_CN.setText("");
-        Cod_Tercero_CN.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Cuarto_CN.setValue(0);
-        TE_Cuarto_CN.setSelectedIndex(0);
-        Fecha_Cuarto_CN.setText("");
-        Cod_Cuarto_CN.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Quinto_CN.setValue(0);
-        TE_Quinto_CN.setSelectedIndex(0);
-        Fecha_Quinto_CN.setText("");
-        Cod_Quinto_CN.setText("");
-        //----------------------------------------------------------------------------
-        Nota_Sexto_CN.setValue(0);
-        TE_Sexto_CN.setSelectedIndex(0);
-        Fecha_Sexto_CN.setText("");
-        Cod_Sexto_CN.setText("");
-        //-------------------------------------------------------------------------------------------------------------
+        JPanel ContenedorDeBasica = (JPanel) ContenedorDePeriodos.getComponent(0);
+        JPanel ContenedorDeDiversificado = (JPanel) ContenedorDePeriodos.getComponent(1);
+        JPanel ContenedorDelPeriodo;
+        JPanel ContenedorDelArea;
+
+        for (int i=0; i<6; i++) {
+
+            if (i < 3) { ContenedorDelPeriodo = (JPanel) ContenedorDeBasica.getComponent(i); }
+            else { ContenedorDelPeriodo = (JPanel) ContenedorDeDiversificado.getComponent(i-3); }
+
+            for (int j=0; j<4; j++) {ContenedorDelArea = (JPanel) ContenedorDelPeriodo.getComponent(j);
+
+                JSpinner Nota = (JSpinner) ContenedorDelArea.getComponent(2);
+                JComboBox TipoEvaluacion = (JComboBox) ContenedorDelArea.getComponent(3);
+                JTextField FechaAprobacion = (JTextField) ContenedorDelArea.getComponent(1);
+                JTextField CodPlantel = (JTextField) ContenedorDelArea.getComponent(4);
+
+                Nota.setValue(0);
+                TipoEvaluacion.setSelectedIndex(0);
+                FechaAprobacion.setText("");
+                CodPlantel.setText("");
+            }
+        }
     }
 
     private void onCancel() {
@@ -711,27 +277,6 @@ public class Certificacion extends JDialog {
     public static void LanzarCertificacion() {
         Certificacion dialog = new Certificacion();
 
-        /*Class c = dialog.getClass();
-        try {
-            //Field field = c.getField("cedulaTextField");
-            //Method method = (Method) JTextField.class.getMethod("setText", "Pruebaaa");
-            //Object returnValue = method.invoke(null, "parameter-value1");
-
-            //Field chap = c.getDeclaredField("cedulaTextField");
-            //chap.setText("Prueba");
-            //Object objeto = new Object();
-            System.out.println("Valor: " + field);
-            field.
-            //objeto.
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        }*/
         dialog.setTitle("Imprimir certificacion");
         dialog.pack();
         dialog.setLocationRelativeTo(null);
