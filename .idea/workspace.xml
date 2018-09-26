@@ -7,14 +7,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f9ace4c-34a6-40af-8e59-24b982989c0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_collections4_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/poi_4_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Excel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/PLANTEL.DBF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report/certificacion.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_collections4_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_collections4_4_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/javadbf_1_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javadbf_1_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/poi_4_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/poi_4_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sisconot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sisconot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Alumno.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Alumno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Configuracion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Configuracion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Equivalencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Equivalencia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/MainWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Notas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Notas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/TextPrompt$Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/TextPrompt$Show.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/TextPrompt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/TextPrompt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/dbf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/dbf.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/sisconot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/sisconot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/sql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/sql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/testForm$MarcoSencillo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/testForm$MarcoSencillo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/testForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/testForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Excel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Excel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/dbf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/dbf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -122,38 +151,41 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="form" value="4" />
-          <entry key="java" value="13" />
+          <entry key="form" value="5" />
+          <entry key="java" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="GUI_DESIGNER_FORM" value="4" />
-          <entry key="JAVA" value="13" />
+          <entry key="GUI_DESIGNER_FORM" value="5" />
+          <entry key="JAVA" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8099" />
+          <entry key="java" value="10859" />
           <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8099" />
+          <entry key="JAVA" value="10859" />
           <entry key="PLAIN_TEXT" value="36" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="535">
+              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,8 +193,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/dbf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="83">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -170,17 +202,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Excel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="92" column="57" lean-forward="true" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="57" />
+            <state relative-caret-position="1039">
+              <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java">
+        <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="292" column="44" lean-forward="true" selection-start-line="292" selection-start-column="44" selection-end-line="292" selection-end-column="44" />
+            <state relative-caret-position="297">
+              <caret line="104" column="56" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -232,15 +273,15 @@
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/utils/TextPrompt.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Info.form" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Info.java" />
-        <option value="$PROJECT_DIR$/src/com/corex/sisconot/dbf.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Notas.java" />
-        <option value="$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/MainWindow.java" />
-        <option value="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form" />
-        <option value="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java" />
-        <option value="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java" />
+        <option value="$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java" />
+        <option value="$PROJECT_DIR$/src/com/corex/sisconot/dbf.java" />
+        <option value="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java" />
+        <option value="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Excel.java" />
+        <option value="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" />
       </list>
     </option>
   </component>
@@ -251,9 +292,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-1" />
-    <option name="width" value="1366" />
-    <option name="height" value="741" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -283,19 +325,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sisconot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sisconot" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
@@ -307,6 +344,13 @@
               <item name="Sisconot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sisconot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sisconot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sisconot" type="462c0819:PsiDirectoryNode" />
+              <item name="Certificacion" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
@@ -324,16 +368,134 @@
     <property name="Repository.Attach.Sources" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="140" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="425" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537934689635" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537981089236" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../JavaLib/commons-collections4-4.2/commons-collections4-4.2.jar!/" />
+    <property name="last_opened_file_path" value="C:/JavaLib/poi-4.0.0/poi-4.0.0.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/javadbf_1_9_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Sisconot.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/sisconot.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/commons_collections4_4_2.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/libraries/poi_4_0_0.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/corex/sisconot/Excel.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -390,10 +552,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25833333" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25746268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -402,13 +564,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.64935064" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.49945828" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39772728" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.25974026" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.66305524" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32467532" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -558,19 +720,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Fixues" />
     <entry file="file://$PROJECT_DIR$/../Print-Certificate/modules/equivalencia.py" />
-    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Notas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -578,35 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="212" column="40" selection-start-line="212" selection-start-column="40" selection-end-line="212" selection-end-column="40" />
-          <folding>
-            <element signature="e#2992#2993#0" expanded="true" />
-            <element signature="e#3034#3035#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
           <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/dbf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -620,10 +744,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/dbf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="104" column="56" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Excel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="92" column="57" lean-forward="true" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="57" />
+        <state relative-caret-position="1039">
+          <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -669,7 +830,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -686,6 +847,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -705,7 +867,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>commons-collections4-4.2</last-edited>
+          <last-edited>poi-4.0.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -230,7 +230,7 @@
                                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
                                     <properties>
-                                      <text value="LCC "/>
+                                      <text value="LCC"/>
                                     </properties>
                                   </component>
                                   <component id="d7ad" class="javax.swing.JTextField">
@@ -456,7 +456,7 @@
                                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
                                     <properties>
-                                      <text value="LCC "/>
+                                      <text value="LCC"/>
                                     </properties>
                                   </component>
                                   <component id="71133" class="javax.swing.JTextField">
@@ -682,7 +682,7 @@
                                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
                                     <properties>
-                                      <text value="LCC "/>
+                                      <text value="LCC"/>
                                     </properties>
                                   </component>
                                   <component id="8ce72" class="javax.swing.JTextField">
@@ -918,7 +918,7 @@
                                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
                                     <properties>
-                                      <text value="LCC "/>
+                                      <text value="LCC"/>
                                     </properties>
                                   </component>
                                   <component id="4d41c" class="javax.swing.JTextField">
@@ -1144,7 +1144,7 @@
                                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
                                     <properties>
-                                      <text value="LCC "/>
+                                      <text value="LCC"/>
                                     </properties>
                                   </component>
                                   <component id="4b2b6" class="javax.swing.JTextField">
@@ -1370,7 +1370,7 @@
                                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                     </constraints>
                                     <properties>
-                                      <text value="LCC "/>
+                                      <text value="LCC"/>
                                     </properties>
                                   </component>
                                   <component id="cb773" class="javax.swing.JTextField">

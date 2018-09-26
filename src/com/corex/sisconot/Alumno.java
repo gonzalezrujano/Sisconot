@@ -6,12 +6,12 @@ import java.util.Date;
 import static java.lang.String.format;
 
 public class Alumno {
-    public static String Cedula;
-    public static String Nombres;
-    public static String Apellidos;
+    public static String Cedula = "";
+    public static String Nombres = "";
+    public static String Apellidos = "";
     public static Date FechaDeNacimiento;
-    public static String LugarDeNacimiento;
-    public static String EntidadFederal;
+    public static String LugarDeNacimiento = "";
+    public static String EntidadFederal = "";
 
     public Alumno(String newCedula, String newNombres, Date newFechaNacimiento, String newLugarNacimiento, String newEntidadFederal) {
         //SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");

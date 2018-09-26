@@ -169,60 +169,53 @@ public class Certificacion extends JDialog {
         }
     }
 
-    private String DeterminarTipoDeEvaluacion(int Evaluacion) {
-        switch (Evaluacion) {
-            case 0:
-                return "F";
-            case 1:
-                return "R";
-            case 2:
-                return "E";
-            default:
-                return "F";
-        }
-    }
-
     private void ImprimirCertificacion() {
-        System.out.println("Imprimir Certificacion");
+        if (!Alumno.Nombres.equals(""))
+        {
+            ArrayList<String[]> Area;
+            String[] Periodo;
 
-        ArrayList<String[]> Area;
-        String[] Periodo;
 
+            JPanel ContenedorDeBasica = (JPanel) ContenedorDePeriodos.getComponent(0);
+            JPanel ContenedorDeDiversificado = (JPanel) ContenedorDePeriodos.getComponent(1);
+            JPanel ContenedorDelPeriodo;
+            JPanel ContenedorDelArea;
 
-        JPanel ContenedorDeBasica = (JPanel) ContenedorDePeriodos.getComponent(0);
-        JPanel ContenedorDeDiversificado = (JPanel) ContenedorDePeriodos.getComponent(1);
-        JPanel ContenedorDelPeriodo;
-        JPanel ContenedorDelArea;
+            for (int i=0; i<6; i++) {
 
-        for (int i=0; i<6; i++) {
+                if (i < 3) { ContenedorDelPeriodo = (JPanel) ContenedorDeBasica.getComponent(i); }
+                else { ContenedorDelPeriodo = (JPanel) ContenedorDeDiversificado.getComponent(i-3); }
 
-            if (i < 3) { ContenedorDelPeriodo = (JPanel) ContenedorDeBasica.getComponent(i); }
-            else { ContenedorDelPeriodo = (JPanel) ContenedorDeDiversificado.getComponent(i-3); }
+                for (int j=0; j<4; j++) {
+                    Area = Notas.Areas.get(j);
+                    Periodo = Area.get(i);
 
-            for (int j=0; j<4; j++) {
-                Area = Notas.Areas.get(j);
-                Periodo = Area.get(i);
+                    ContenedorDelArea = (JPanel) ContenedorDelPeriodo.getComponent(j);
 
-                ContenedorDelArea = (JPanel) ContenedorDelPeriodo.getComponent(j);
+                    JSpinner Nota = (JSpinner) ContenedorDelArea.getComponent(2);
+                    JComboBox TipoEvaluacion = (JComboBox) ContenedorDelArea.getComponent(3);
+                    JTextField FechaAprobacion = (JTextField) ContenedorDelArea.getComponent(1);
+                    JTextField CodPlantel = (JTextField) ContenedorDelArea.getComponent(4);
 
-                JSpinner Nota = (JSpinner) ContenedorDelArea.getComponent(2);
-                JComboBox TipoEvaluacion = (JComboBox) ContenedorDelArea.getComponent(3);
-                JTextField FechaAprobacion = (JTextField) ContenedorDelArea.getComponent(1);
-                JTextField CodPlantel = (JTextField) ContenedorDelArea.getComponent(4);
+                    Periodo[0] = String.valueOf(Nota.getValue());
+                    Periodo[1] = (String) TipoEvaluacion.getSelectedItem();
+                    Periodo[2] = FechaAprobacion.getText();
+                    Periodo[3] = CodPlantel.getText();
 
-                Periodo[0] = String.valueOf(Nota.getValue());
-                Periodo[1] = (String) TipoEvaluacion.getSelectedItem();
-                Periodo[2] = FechaAprobacion.getText();
-                Periodo[3] = CodPlantel.getText();
-
-                Area.set(i, Periodo);
-                Notas.Areas.set(j, Area);
+                    Area.set(i, Periodo);
+                    Notas.Areas.set(j, Area);
+                }
             }
-        }
+
+            Excel excel = new Excel();
+        } else { Info.LanzarInfo("Defina el alumno a imprimir"); }
+
+
 
 
 
         //VER NUEVO RECORD (TEMPORAL)
+        /*
         String[] NombresMuestra = new String[] {"LCC", "MAT", "MTC", "CN"};
         for (int i=0; i<4; i++) {
             System.out.println(NombresMuestra[i]);
@@ -231,7 +224,7 @@ public class Certificacion extends JDialog {
                 String[] DatosDelArea = Areaa.get(j);
                 System.out.println("Nota: " + DatosDelArea[0] + " TE: " + DatosDelArea[1] + " Fecha: " + DatosDelArea[2] + " Cod: " + DatosDelArea[3]);
             }
-        }
+        }*/
     }
 
     private void LimpiarDatos() {

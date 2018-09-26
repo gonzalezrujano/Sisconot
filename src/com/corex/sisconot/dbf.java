@@ -42,4 +42,24 @@ public class dbf {
         }
     }
 
+    public static String[] BuscarPlantel(String Codigo) {
+        InputStream inputStream  = null;
+        try { inputStream = new FileInputStream("data/PLANTEL.DBF"); } catch (FileNotFoundException e) { e.printStackTrace(); }
+        DBFReader reader = new DBFReader(inputStream);
+
+        String[] Plantel = new String[4];
+
+        Object[] rowObjects;
+        while( (rowObjects = reader.nextRecord()) != null) {
+            if (rowObjects[0].equals(Codigo)) {
+                Plantel[0] = (String) rowObjects[0];
+                Plantel[1] = (String) rowObjects[1];
+                Plantel[2] = (String) rowObjects[2];
+                Plantel[3] = (String) rowObjects[4];
+            }
+        }
+
+        return Plantel;
+    }
+
 }

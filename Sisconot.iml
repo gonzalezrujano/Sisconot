@@ -7,8 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="commons-collections4-4.2" level="project" />
     <orderEntry type="library" name="javadbf-1.9.2" level="project" />
     <orderEntry type="library" name="poi-4.0.0" level="project" />
-    <orderEntry type="library" name="commons-collections4-4.2" level="project" />
   </component>
 </module>
