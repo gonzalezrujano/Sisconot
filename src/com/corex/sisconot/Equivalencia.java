@@ -267,7 +267,7 @@ public class Equivalencia {
 
     private ArrayList<String[]> TransferirUltimosDeDiversificado(ArrayList<ArrayList<String[]>> Dependencias) {
         ArrayList<String[]> QuintoYSextoPeriodo = new ArrayList<>();
-
+        // DEBE PODER PROMEDIAR (REPARA CASO)
         int SumatoriaNotasDelQuinto = 0, SumatoriaNotasDelSexto = 0;
         ArrayList<String[]> DatosDeAprobacionDelQuinto = new ArrayList<>();
         ArrayList<String[]> DatosDeAprobacionDelSexto = new ArrayList<>();

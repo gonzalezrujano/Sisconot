@@ -22,6 +22,7 @@ public class sisconot {
             System.out.println(lista[i].getClassName());
         }*/
         System.out.println("Hola Sisconot");
-        MainWindow.lanzarApp();
+        Excel excel = new Excel();
+        //MainWindow.lanzarApp();
     }
 }
