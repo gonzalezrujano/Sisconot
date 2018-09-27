@@ -3,21 +3,18 @@ package com.corex.sisconot;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static java.lang.String.format;
-
 public class Alumno {
     public static String Cedula = "";
     public static String Nombres = "";
     public static String Apellidos = "";
-    public static Date FechaDeNacimiento;
+    public static String FechaDeNacimiento = "";
     public static String LugarDeNacimiento = "";
     public static String EntidadFederal = "";
 
     public Alumno(String newCedula, String newNombres, Date newFechaNacimiento, String newLugarNacimiento, String newEntidadFederal) {
-        //SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Cedula = newCedula;
         SepararNombresYApellidos(newNombres);
-        FechaDeNacimiento = newFechaNacimiento;
+        ConvertirFormatoDeFecha(newFechaNacimiento);
         LugarDeNacimiento = newLugarNacimiento;
         EntidadFederal = newEntidadFederal;
     }
@@ -29,6 +26,11 @@ public class Alumno {
                 Nombres = newNombres.substring(i+1, newNombres.length());
             }
         }
+    }
+
+    private void ConvertirFormatoDeFecha(Date newFechaDeNacimiento) {
+        SimpleDateFormat Formato = new SimpleDateFormat("dd-MM-yyyy");
+        FechaDeNacimiento = Formato.format(newFechaDeNacimiento);
     }
 
     public static void VaciarDatos() {

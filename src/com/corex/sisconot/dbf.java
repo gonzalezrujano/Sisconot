@@ -13,7 +13,7 @@ public class dbf {
         boolean RegistroEncontrado = false;
 
         InputStream inputStream  = null;
-        try { inputStream = new FileInputStream("data/DATOS.DBF"); } catch (FileNotFoundException e) { e.printStackTrace(); }
+        try { inputStream = new FileInputStream(Configuracion.RutaDeLosDBFs + "DATOS.DBF"); } catch (FileNotFoundException e) { e.printStackTrace(); }
         DBFReader reader = new DBFReader(inputStream);
 
         Object[] rowObjects;
@@ -30,7 +30,7 @@ public class dbf {
     public static void BuscarNotas(String Cedula) {
 
         InputStream inputStream  = null;
-        try { inputStream = new FileInputStream("data/RECORD.DBF"); } catch (FileNotFoundException e) { e.printStackTrace(); }
+        try { inputStream = new FileInputStream(Configuracion.RutaDeLosDBFs + "RECORD.DBF"); } catch (FileNotFoundException e) { e.printStackTrace(); }
         DBFReader reader = new DBFReader(inputStream);
 
         Object[] rowObjects;
@@ -44,7 +44,7 @@ public class dbf {
 
     public static String[] BuscarPlantel(String Codigo) {
         InputStream inputStream  = null;
-        try { inputStream = new FileInputStream("data/PLANTEL.DBF"); } catch (FileNotFoundException e) { e.printStackTrace(); }
+        try { inputStream = new FileInputStream(Configuracion.RutaDeLosDBFs + "PLANTEL.DBF"); } catch (FileNotFoundException e) { e.printStackTrace(); }
         DBFReader reader = new DBFReader(inputStream);
 
         String[] Plantel = new String[4];

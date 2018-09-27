@@ -32,18 +32,10 @@ public class sisconot {
         for (int i = 0; i < lista.length; i++) {
             System.out.println(lista[i].getClassName());
         }*/
-
-        /* CORREGIR */
-        /*
-        > Archivo de conf con rutas de los dbf
-        > Agregar promedio a 5 y 6 to periodo
-        > Corregir formato de fecha de nacimiento
-        > Quitar temporal de tony por defecto ?
-        > Borrar temporal de revision de record nuevo ?
-        > Colocar identificador del plantel en el documento
-        > Quitar todos los System ?
-        */
         System.out.println("Hola Sisconot");
+
+        Configuracion configuracion = new Configuracion(); // Cargar configuraciones
+
         MainWindow.lanzarApp();
     }
 }

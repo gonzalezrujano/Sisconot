@@ -26,9 +26,6 @@ public class Certificacion extends JDialog {
     private JPanel ContenedorDePeriodos;
 
     public Certificacion() {
-        //TEMPORAL
-        cedulaTextField.setText("13120813");
-
         // Definiciones de la Ventana
         setContentPane(contentPane);
         setModal(true);
@@ -209,22 +206,6 @@ public class Certificacion extends JDialog {
 
             Excel excel = new Excel();
         } else { Info.LanzarInfo("Defina el alumno a imprimir"); }
-
-
-
-
-
-        //VER NUEVO RECORD (TEMPORAL)
-        /*
-        String[] NombresMuestra = new String[] {"LCC", "MAT", "MTC", "CN"};
-        for (int i=0; i<4; i++) {
-            System.out.println(NombresMuestra[i]);
-            ArrayList<String[]> Areaa = Notas.Areas.get(i);
-            for (int j=0; j<6; j++) {
-                String[] DatosDelArea = Areaa.get(j);
-                System.out.println("Nota: " + DatosDelArea[0] + " TE: " + DatosDelArea[1] + " Fecha: " + DatosDelArea[2] + " Cod: " + DatosDelArea[3]);
-            }
-        }*/
     }
 
     private void LimpiarDatos() {

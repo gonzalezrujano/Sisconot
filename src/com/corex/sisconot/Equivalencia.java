@@ -26,12 +26,6 @@ public class Equivalencia {
         }
         ArrayList<String[]> Area = Notas.Areas.get(PosicionDelArea);
 
-        /*System.out.println(Mencion);
-        for (int i=0; i<6; i++) {
-            String[] Datos = Area.get(i);
-            System.out.println(Datos[0] + " " + Datos[1] + " " +  Datos[2] + " " + Datos[3]);
-        }*/
-
         int PosicionDelPeriodo = 0;
         if (Mencion.equals("Basica")) {
             PosicionDelPeriodo = 0;
@@ -42,12 +36,6 @@ public class Equivalencia {
             Area.set(i+PosicionDelPeriodo, AreaAGuardar.get(i));
         }
         Notas.Areas.set(PosicionDelArea, Area);
-
-        /*System.out.println(Mencion);
-        for (int i=0; i<6; i++) {
-            String[] Datos = Area.get(i);
-            System.out.println(Datos[0] + " " + Datos[1] + " " +  Datos[2] + " " + Datos[3]);
-        }*/
     }
 
     //------------------------------------Convertir Escala------------------------------------------------------------//
@@ -88,10 +76,8 @@ public class Equivalencia {
     private String[] PromediarSemestres(String[] SemestreIzquierdo, String[] SemestreDerecho) {
         String[] DatosDeLaEquivalencia = new String[4];
 
-        //System.out.println("Promediar semestres");
         if (SemestreIzquierdo[0].equals("")) { SemestreIzquierdo[0] = "0"; }
         if (SemestreDerecho[0].equals("")) { SemestreDerecho[0] = "0"; }
-        //System.out.println("Izq =>" + SemestreIzquierdo[0] + " " + SemestreDerecho[0]);
         // Nota del Periodo
         DatosDeLaEquivalencia[0] = (int) Math.ceil((Double.parseDouble(SemestreIzquierdo[0]) + Double.parseDouble(SemestreDerecho[0])) / 2)+"";
         // Tipo de Evaluacion del Periodo
@@ -132,13 +118,13 @@ public class Equivalencia {
 
     private ArrayList<ArrayList<String[]>> VerificarCuantasTieneAprobadas(ArrayList<ArrayList<String[]>> DependenciasDelPeriodo) {
         ArrayList<ArrayList<String[]>> Aprobadas = new ArrayList<>();
-        //System.out.println("Verificar cuantas dependencias de este periodo estan aprobadas");
+
         for (int i=0; i<DependenciasDelPeriodo.size(); i++) {
             ArrayList<String[]> SemestresDeLaDependencia = DependenciasDelPeriodo.get(i);
             String[] PromedioDeLaDependencia = PromediarSemestres(SemestresDeLaDependencia.get(0), SemestresDeLaDependencia.get(1));
             // Verificar si esta dependencia esta aprobada
             int NotaDelPromedio = Integer.parseInt(PromedioDeLaDependencia[0]);
-            //System.out.println("Nota del Promedio" + NotaDelPromedio);
+
             if (NotaDelPromedio > 9) {
                 Aprobadas.add(SemestresDeLaDependencia);
             }
@@ -187,9 +173,7 @@ public class Equivalencia {
                     Mes = MesAEvaluar;
                     TipoDeEvaluacion = TipoDeAprobacionAEvaluar;
                 }
-            } else {
-                continue;
-            }
+            } else { continue; }
 
         }
 
@@ -267,31 +251,105 @@ public class Equivalencia {
 
     private ArrayList<String[]> TransferirUltimosDeDiversificado(ArrayList<ArrayList<String[]>> Dependencias) {
         ArrayList<String[]> QuintoYSextoPeriodo = new ArrayList<>();
-        // DEBE PODER PROMEDIAR (REPARA CASO)
-        int SumatoriaNotasDelQuinto = 0, SumatoriaNotasDelSexto = 0;
-        ArrayList<String[]> DatosDeAprobacionDelQuinto = new ArrayList<>();
-        ArrayList<String[]> DatosDeAprobacionDelSexto = new ArrayList<>();
-        for (int i=0; i<Dependencias.size(); i++) {
-            ArrayList<String[]> SemestresDeLaDependencia = Dependencias.get(i);
+        // Verificar promedio
+        ArrayList<String[]> AprobadasDelQuinto = new ArrayList<>(), AprobadasDelSexto = new ArrayList<>();
+        if (Dependencias.size() >= 3) {
+            for (int i=0; i<Dependencias.size(); i++) {
+                ArrayList<String[]> SemestresDeLaDependencia = Dependencias.get(i);
 
-            String[] SemestreIzquierdo = SemestresDeLaDependencia.get(0);
-            String[] SemestreDerecho = SemestresDeLaDependencia.get(1);
+                String[] SemestreIzquierdo = SemestresDeLaDependencia.get(0);
+                String[] SemestreDerecho = SemestresDeLaDependencia.get(1);
 
-            SumatoriaNotasDelQuinto += Integer.parseInt(SemestreIzquierdo[0]);
-            SumatoriaNotasDelSexto += Integer.parseInt(SemestreDerecho[0]);
+                if (Integer.parseInt(SemestreIzquierdo[0]) > 9) { AprobadasDelQuinto.add(SemestreIzquierdo); }
+                if (Integer.parseInt(SemestreDerecho[0]) > 9) { AprobadasDelSexto.add(SemestreDerecho); }
+            }
+        }
+        // ----------------------------------------------------------------------------------------------------
+        if (AprobadasDelQuinto.size() != (Dependencias.size() - 1) && AprobadasDelSexto.size() != (Dependencias.size() - 1)) {
+            // Equivalencia normal para el Quinto y el Sexto
+            int SumatoriaNotasDelQuinto = 0, SumatoriaNotasDelSexto = 0;
+            ArrayList<String[]> DatosDeAprobacionDelQuinto = new ArrayList<>();
+            ArrayList<String[]> DatosDeAprobacionDelSexto = new ArrayList<>();
+            for (int i=0; i<Dependencias.size(); i++) {
+                ArrayList<String[]> SemestresDeLaDependencia = Dependencias.get(i);
 
-            DatosDeAprobacionDelQuinto.add(SemestreIzquierdo);
-            DatosDeAprobacionDelSexto.add(SemestreDerecho);
+                String[] SemestreIzquierdo = SemestresDeLaDependencia.get(0);
+                String[] SemestreDerecho = SemestresDeLaDependencia.get(1);
+
+                SumatoriaNotasDelQuinto += Integer.parseInt(SemestreIzquierdo[0]);
+                SumatoriaNotasDelSexto += Integer.parseInt(SemestreDerecho[0]);
+
+                DatosDeAprobacionDelQuinto.add(SemestreIzquierdo);
+                DatosDeAprobacionDelSexto.add(SemestreDerecho);
+            }
+
+            String[] ResultadoDelQuinto = EvaluarDatosDeAprobacion(DatosDeAprobacionDelQuinto);
+            String[] ResultadoDelSexto = EvaluarDatosDeAprobacion(DatosDeAprobacionDelSexto);
+
+            ResultadoDelQuinto[0] = String.valueOf(SumatoriaNotasDelQuinto / Dependencias.size());
+            ResultadoDelSexto[0] = String.valueOf(SumatoriaNotasDelSexto / Dependencias.size());
+
+            QuintoYSextoPeriodo.add(ResultadoDelQuinto);
+            QuintoYSextoPeriodo.add(ResultadoDelSexto);
+        } else {
+            // ¿Promediar Quinto?
+            if (AprobadasDelQuinto.size() == (Dependencias.size() - 1)) {
+                int SumatoriaDelPromedio = 0;
+                ArrayList<String[]> DatosDeAprobacion = new ArrayList<>();
+                for (int i=0; i<AprobadasDelQuinto.size(); i++) {
+                    String[] Aprobada = AprobadasDelQuinto.get(i);
+                    SumatoriaDelPromedio += Integer.parseInt(Aprobada[0]);
+                    DatosDeAprobacion.add(Aprobada);
+                }
+                String[] Resultado = EvaluarDatosDeAprobacion(DatosDeAprobacion);
+                Resultado[0] = String.valueOf(SumatoriaDelPromedio / AprobadasDelQuinto.size());
+                QuintoYSextoPeriodo.add(Resultado);
+
+            } else {
+                // Quinto sin promedio
+                int SumatoriaDelPromedio = 0;
+                ArrayList<String[]> DatosDeAprobacion = new ArrayList<>();
+                for (int i=0; i<Dependencias.size(); i++) {
+                    ArrayList<String[]> Dependencia = Dependencias.get(i);
+                    String[] Semestre = Dependencia.get(0);
+
+                    SumatoriaDelPromedio += Integer.parseInt(Semestre[0]);
+                    DatosDeAprobacion.add(Semestre);
+                }
+                String[] Resultado = EvaluarDatosDeAprobacion(DatosDeAprobacion);
+                Resultado[0] = String.valueOf(SumatoriaDelPromedio / Dependencias.size());
+                QuintoYSextoPeriodo.add(Resultado);
+            }
+            // ¿Promediar Sexto?
+            if (AprobadasDelSexto.size() == (Dependencias.size() - 1)) {
+                int SumatoriaDelPromedio = 0;
+                ArrayList<String[]> DatosDeAprobacion = new ArrayList<>();
+                for (int i=0; i<AprobadasDelSexto.size(); i++) {
+                    String[] Aprobada = AprobadasDelSexto.get(i);
+                    SumatoriaDelPromedio += Integer.parseInt(Aprobada[0]);
+                    DatosDeAprobacion.add(Aprobada);
+                }
+                String[] Resultado = EvaluarDatosDeAprobacion(DatosDeAprobacion);
+                Resultado[0] = String.valueOf(SumatoriaDelPromedio / AprobadasDelSexto.size());
+                QuintoYSextoPeriodo.add(Resultado);
+            } else {
+                // Sexto sin promedio
+                int SumatoriaDelPromedio = 0;
+                ArrayList<String[]> DatosDeAprobacion = new ArrayList<>();
+                for (int i=0; i<Dependencias.size(); i++) {
+                    ArrayList<String[]> Dependencia = Dependencias.get(i);
+                    String[] Semestre = Dependencia.get(1);
+
+                    SumatoriaDelPromedio += Integer.parseInt(Semestre[0]);
+                    DatosDeAprobacion.add(Semestre);
+                }
+                String[] Resultado = EvaluarDatosDeAprobacion(DatosDeAprobacion);
+                Resultado[0] = String.valueOf(SumatoriaDelPromedio / Dependencias.size());
+                QuintoYSextoPeriodo.add(Resultado);
+            }
         }
 
-        String[] ResultadoDelQuinto = EvaluarDatosDeAprobacion(DatosDeAprobacionDelQuinto);
-        String[] ResultadoDelSexto = EvaluarDatosDeAprobacion(DatosDeAprobacionDelSexto);
 
-        ResultadoDelQuinto[0] = String.valueOf(SumatoriaNotasDelQuinto / Dependencias.size());
-        ResultadoDelSexto[0] = String.valueOf(SumatoriaNotasDelSexto / Dependencias.size());
-
-        QuintoYSextoPeriodo.add(ResultadoDelQuinto);
-        QuintoYSextoPeriodo.add(ResultadoDelSexto);
 
         return QuintoYSextoPeriodo;
     }
@@ -332,18 +390,14 @@ public class Equivalencia {
         // Sacar dependencias de los 3 periodos de la mencion
         int inicioDeRecorteDelSemestre = 0, finDeRecorteDelSemestre = 12;
 
-        //System.out.println(Mencion);
         for (int i=0; i<NroDePeriodos; i++) {
 
-            //System.out.println("Periodo: "+(i+1));
             int[] PosicionesDeLaDependencia = PosicionesDeLasDependencias.get(i);
 
             // Sacar el nro de dependencias correpondientes
             int inicioDelCorte = inicioDeRecorteDelSemestre, finDelCorte = finDeRecorteDelSemestre;
             ArrayList<ArrayList<String[]>> Dependencia = new ArrayList<>();
-            //System.out.println("Nro de dependencias del periodo: " + PosicionesDeLaDependencia.length);
             for (int j=0; j<PosicionesDeLaDependencia.length; j++) {
-                //System.out.println("  Posicion de la Dependencia: "+(j+1)+"=> "+PosicionesDeLaDependencia[j]);
                 // Sacar y cortar el registro de la dependencia en los semestre correspondiente
                 String RegistroCompletoDeLaDependencia = record[PosicionesDeLaDependencia[j]].toString();
 
@@ -351,8 +405,6 @@ public class Equivalencia {
                 ArrayList<String[]> SemestresDeLaDependencia = new ArrayList<>();
                 for (int k=0; k<2; k++) {
                     // Recortar semestre de la dependencia y separar datos
-                    //System.out.println("    Start: "+inicioDelCorte+" End: "+finDelCorte);
-                    //System.out.println("    Recorte Completo: "+RegistroCompletoDeLaDependencia);
 
                     // Verificar si el campo del record esta vacio
                     String SemestreASeparar = "";
@@ -367,7 +419,6 @@ public class Equivalencia {
                     }
 
                     SemestreDeLaDependencia = SepararMateria(SemestreASeparar);
-                    //System.out.println("        Ya separado: "+SemestreDeLaDependencia[0]+" "+SemestreDeLaDependencia[1]+" "+SemestreDeLaDependencia[2]+" "+SemestreDeLaDependencia[3]);
 
                     SemestresDeLaDependencia.add(SemestreDeLaDependencia);
                     // Cortar el semestre posterior
@@ -392,16 +443,13 @@ public class Equivalencia {
     //----------------------------------Iniciar Equivalencias---------------------------------------------------------//
 
     private void HacerEquivalencia(String mencion, Object[] record) {
-        //System.out.println(mencion);
         // Castellano -> LCC
-        //System.out.println("LCC");
         ArrayList<String[]> Castellano = ExtraerMateria(mencion, record[3].toString());
         ArrayList<String[]> LCC = TransferirMateriaSinDependencias(mencion, Castellano);
         LCC = TransferirEscalaDeNotas(LCC);
         GuardarMateria(mencion,"LCC", LCC);
         //-----------------------------------------------------------------------------------------------------------------------//
         // Matematica -> MAT (Todos los periodos)
-        //System.out.println("MAT");
         int PosicionEnElRecord = ((mencion == "Basica")?5:4);
         ArrayList<String[]> Matematica = ExtraerMateria(mencion, record[PosicionEnElRecord].toString());
         ArrayList<String[]> MAT = TransferirMateriaSinDependencias(mencion, Matematica);
@@ -409,7 +457,6 @@ public class Equivalencia {
         GuardarMateria(mencion,"MAT", MAT);
         //-----------------------------------------------------------------------------------------------------------------------//
         // Historias -> MTC
-        //System.out.println("MTC");
         ArrayList<String[]> MTC = new ArrayList<>();
         ArrayList<ArrayList<ArrayList<String[]>>> Dependencias = ExtraerDependenciasDelArea(mencion, "MTC", record);
         for (int i=0; i<Dependencias.size(); i++) {
@@ -430,7 +477,6 @@ public class Equivalencia {
         GuardarMateria(mencion,"MTC", MTC);
         //-----------------------------------------------------------------------------------------------------------------------//
         // Ciencias -> CN
-        //System.out.println("CN");
         ArrayList<String[]> CN = new ArrayList<>();
         Dependencias = ExtraerDependenciasDelArea(mencion, "CN", record);
         for (int i=0; i<Dependencias.size(); i++) {
