@@ -7,12 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f9ace4c-34a6-40af-8e59-24b982989c0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Sisconot_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Sisconot_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_collections4_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/commons_collections4_4_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/javadbf_1_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javadbf_1_9_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/poi_4_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/poi_4_0_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PLANTEL.DBF" beforeDir="false" afterPath="$PROJECT_DIR$/data/PLANTEL.DBF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Alumno.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Alumno.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/Certificacion$2.class" afterDir="false" />
@@ -38,16 +40,9 @@
       <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/testForm$MarcoSencillo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/testForm$MarcoSencillo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/testForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/testForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/certificacion.xls" beforeDir="false" afterPath="$PROJECT_DIR$/report/certificacion.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Configuracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Configuracion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Excel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Excel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/MainWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/dbf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/dbf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -148,50 +143,83 @@
     <session id="-1530672717">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.55" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.55" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
-          <entry key="form" value="5" />
-          <entry key="java" value="18" />
+          <entry key="class" value="4" />
+          <entry key="form" value="6" />
+          <entry key="java" value="20" />
+          <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="GUI_DESIGNER_FORM" value="5" />
-          <entry key="JAVA" value="18" />
+          <entry key="CLASS" value="4" />
+          <entry key="GUI_DESIGNER_FORM" value="6" />
+          <entry key="JAVA" value="20" />
+          <entry key="Properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10859" />
+          <entry key="java" value="10902" />
+          <entry key="properties" value="6" />
           <entry key="txt" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10859" />
+          <entry key="JAVA" value="10902" />
           <entry key="PLAIN_TEXT" value="36" />
+          <entry key="Properties" value="6" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="214" column="20" lean-forward="true" selection-start-line="214" selection-start-column="20" selection-end-line="214" selection-end-column="20" />
+            <state relative-caret-position="3604">
+              <caret line="214" column="20" selection-start-line="214" selection-start-column="20" selection-end-line="214" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/dbf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Excel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="159" column="72" selection-start-line="159" selection-start-column="72" selection-end-line="159" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -243,15 +271,15 @@
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Notas.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/MainWindow.form" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Configuracion.java" />
-        <option value="$PROJECT_DIR$/data/config.properties" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/dbf.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java" />
+        <option value="$PROJECT_DIR$/data/config.properties" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Excel.java" />
-        <option value="$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java" />
       </list>
     </option>
   </component>
@@ -295,7 +323,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,11 +335,6 @@
               <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sisconot" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sisconot" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
@@ -328,7 +351,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,10 +367,10 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="425" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538022843960" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538059619273" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../JavaLib/poi-4.0.0/poi-4.0.0.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="C:/JavaLib/poi-4.0.0/poi-4.0.0.jar!/" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
@@ -364,7 +387,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.sisconot">
     <configuration name="sisconot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.corex.sisconot.sisconot" />
       <module name="Sisconot" />
@@ -372,6 +395,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Sisconot.jar" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Sisconot_jar/Sisconot.jar" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="Sisconot" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JAR Application.Sisconot.jar" />
+      <item itemvalue="Application.sisconot" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.sisconot" />
@@ -407,9 +440,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23484848" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24253732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -418,7 +452,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.4107143" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.41061756" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39772728" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -533,9 +567,7 @@
         <state relative-caret-position="-2142" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/MainWindow.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/MainWindow.class" />
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/test.java" />
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/testForm.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -574,16 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Excel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Alumno.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
@@ -601,24 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Notas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/dbf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -633,9 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -646,13 +651,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/sisconot.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="214" column="20" lean-forward="true" selection-start-line="214" selection-start-column="20" selection-end-line="214" selection-end-column="20" />
+        <state relative-caret-position="3604">
+          <caret line="214" column="20" selection-start-line="214" selection-start-column="20" selection-end-line="214" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/dbf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Excel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="159" column="72" selection-start-line="159" selection-start-column="72" selection-end-line="159" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -698,7 +730,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -715,6 +747,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

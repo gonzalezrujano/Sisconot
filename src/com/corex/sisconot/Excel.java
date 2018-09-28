@@ -158,7 +158,6 @@ public class Excel {
                         for (int k=0; k<PlantelesCursados.size(); k++)
                         {
                             String[] Plantel = PlantelesCursados.get(k);
-
                             if (Plantel[0].equals(CodPlantel)) {
                                 Encontrado = true;
                                 break;

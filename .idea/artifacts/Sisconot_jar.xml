@@ -3,7 +3,9 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Sisconot_jar</output-path>
     <root id="archive" name="Sisconot.jar">
       <element id="module-output" name="Sisconot" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../../javadbf/target/javadbf-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/JavaLib/poi-4.0.0/poi-4.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/JavaLib/commons-collections4-4.2/commons-collections4-4.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/JavaLib/javadbf/target/javadbf-1.9.2.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
