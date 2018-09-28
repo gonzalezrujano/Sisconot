@@ -25,7 +25,7 @@ public class MainWindow implements ActionListener {
         mi1.addActionListener(e -> Certificacion.LanzarCertificacion());
         menu1.add(mi1);
         mi2= new JMenuItem("Ajustes Generales");
-        mi2.addActionListener(e -> System.out.println("Lanzar Ajustes Generales"));
+        //mi2.addActionListener(e -> Ajustes.LanzarAjustes());
         menu1.add(mi2);
         mi3= new JMenuItem("Salir");
         mi3.addActionListener(e -> System.exit(0));

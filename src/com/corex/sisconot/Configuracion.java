@@ -10,6 +10,8 @@ public class Configuracion {
 
     public Configuracion() {
         Propiedades = new Properties();
+
+        // Obtener ruta absoluta de los DBF de Sisconot
         try { Propiedades.load(new FileReader("data/config.properties")); } catch (IOException e) { e.printStackTrace(); }
         RutaDeLosDBFs = Propiedades.getProperty("Patch_DBF");
     }
