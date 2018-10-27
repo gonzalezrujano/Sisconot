@@ -195,24 +195,18 @@ public class Excel {
 
     private void ColocarDatosDelEstudiante() {
         Columna = Hoja1.getRow(8);
-        // Cedula del alumno
         Celda = Columna.getCell(7);
         Celda.setCellValue(Alumno.Cedula);
-        // Fecha de nacimiento del alumno
         Celda = Columna.getCell(38);
         Celda.setCellValue(FormatearFechaDeNacimiento(Alumno.FechaDeNacimiento));
         Columna = Hoja1.getRow(9);
-        // Apellidos del alumno
         Celda = Columna.getCell(4);
         Celda.setCellValue(Alumno.Apellidos);
-        // Nombres del alumno
         Celda = Columna.getCell(35);
         Celda.setCellValue(Alumno.Nombres);
         Columna = Hoja1.getRow(10);
-        // Lugar de nacimiento del alumno
         Celda = Columna.getCell(10);
         Celda.setCellValue(Alumno.LugarDeNacimiento);
-        // Entidad de nacimiento del alumno
         Celda = Columna.getCell(41);
         Celda.setCellValue(Alumno.EntidadFederal);
     }
