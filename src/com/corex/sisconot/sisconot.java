@@ -33,9 +33,6 @@ public class sisconot {
             System.out.println(lista[i].getClassName());
         }*/
         System.out.println("Hola Sisconot");
-        Testo testo = new Testo();
-        System.out.println(testo.getTexto());
-        System.out.println(testo.getPrueba());
 
         //Configuracion configuracion = new Configuracion(); // Cargar configuraciones
         //MainWindow.lanzarApp();
