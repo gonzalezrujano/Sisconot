@@ -8,9 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f9ace4c-34a6-40af-8e59-24b982989c0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/sisconot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sisconot/com/corex/sisconot/sisconot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/Escaneo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/Escaneo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,18 +54,19 @@
     <session id="785456569">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -102,16 +101,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="18087" />
-          <entry key="kt" value="2113" />
+          <entry key="kt" value="3048" />
           <entry key="properties" value="49" />
-          <entry key="txt" value="116" />
+          <entry key="txt" value="182" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="18087" />
-          <entry key="Kotlin" value="2113" />
-          <entry key="PLAIN_TEXT" value="116" />
+          <entry key="Kotlin" value="3048" />
+          <entry key="PLAIN_TEXT" value="182" />
           <entry key="Properties" value="49" />
         </counts>
       </usages-collector>
@@ -174,8 +173,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Escaneo.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+            <state relative-caret-position="536">
+              <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+              <folding>
+                <element signature="e#28#129#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -295,8 +297,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -410,13 +412,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540612695309</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: Extraccion y escaneo del contenido de las Certificaciones">
+      <created>1540776800785</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540776800785</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1689394" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17121212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -425,7 +435,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.9431818" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.39123377" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39772728" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -517,7 +527,8 @@
     <MESSAGE value="Agregada interfaz grafica principal" />
     <MESSAGE value="Fix: Opcion JComBox en Intefaz de certificacion" />
     <MESSAGE value="feat: Base para Kotlin y escaneo de Notas" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Base para Kotlin y escaneo de Notas" />
+    <MESSAGE value="feat: Extraccion y escaneo del contenido de las Certificaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Extraccion y escaneo del contenido de las Certificaciones" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -671,8 +682,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Escaneo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        <state relative-caret-position="536">
+          <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+          <folding>
+            <element signature="e#28#129#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
