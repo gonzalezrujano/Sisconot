@@ -30,6 +30,10 @@ class Extraccion(Ubicacion: String) {
     var NumeroDeIteraciones : Int = 0
     var ListaResultados : ArrayList<String> = ArrayList()
 
+    fun EstablecerNroIteraciones(NroIteraciones : Int) {
+        NumeroDeIteraciones = NroIteraciones
+    }
+
     fun LeerContenido() {
         while (ContenidoArchivo.hasNextLine()) {
             LineaActual = ContenidoArchivo.nextLine()
@@ -65,7 +69,7 @@ fun main(args: Array<String>) {
     //Escaneo("Scan.JPG", Ubicacion)
     var extraccion = Extraccion(Ubicacion)
     extraccion.Busqueda = "CASTELLANO"
-    extraccion.NumeroDeIteraciones = 3
+    extraccion.EstablecerNroIteraciones(3)
     extraccion.LeerContenido()
     println(extraccion.ListaResultados.get(1))
 

@@ -54,19 +54,19 @@
     <session id="785456569">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.42" value="1" />
-          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.43" value="2" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -74,7 +74,7 @@
           <entry key="Fixues" value="1" />
           <entry key="form" value="14" />
           <entry key="iml" value="2" />
-          <entry key="java" value="57" />
+          <entry key="java" value="58" />
           <entry key="kt" value="1" />
           <entry key="properties" value="3" />
           <entry key="py" value="2" />
@@ -85,7 +85,7 @@
         <counts>
           <entry key="GUI_DESIGNER_FORM" value="14" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="56" />
+          <entry key="JAVA" value="57" />
           <entry key="Kotlin" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Properties" value="3" />
@@ -100,17 +100,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="18087" />
-          <entry key="kt" value="3048" />
+          <entry key="java" value="18113" />
+          <entry key="kt" value="3146" />
           <entry key="properties" value="49" />
-          <entry key="txt" value="182" />
+          <entry key="txt" value="249" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="18087" />
-          <entry key="Kotlin" value="3048" />
-          <entry key="PLAIN_TEXT" value="182" />
+          <entry key="JAVA" value="18113" />
+          <entry key="Kotlin" value="3146" />
+          <entry key="PLAIN_TEXT" value="249" />
           <entry key="Properties" value="49" />
         </counts>
       </usages-collector>
@@ -173,8 +173,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Escaneo.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+            <state relative-caret-position="416">
+              <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
               <folding>
                 <element signature="e#28#129#0" expanded="true" />
               </folding>
@@ -233,7 +233,6 @@
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Certificacion.form" />
-        <option value="$PROJECT_DIR$/src/com/corex/sisconot/dbf.java" />
         <option value="$PROJECT_DIR$/data/config.properties" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Ajustes.form" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Configuracion.java" />
@@ -243,6 +242,7 @@
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Test.kt" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/sisconot.java" />
         <option value="$PROJECT_DIR$/src/com/corex/sisconot/Escaneo.kt" />
+        <option value="$PROJECT_DIR$/src/com/corex/sisconot/dbf.java" />
       </list>
     </option>
   </component>
@@ -292,6 +292,17 @@
             <path>
               <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sisconot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sisconot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sisconot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sisconot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sisconot" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -419,14 +430,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540776800785</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: Clase de extraccion de Informacion del Documento">
+      <created>1541127551069</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541127551069</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17121212" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17348485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -528,7 +546,8 @@
     <MESSAGE value="Fix: Opcion JComBox en Intefaz de certificacion" />
     <MESSAGE value="feat: Base para Kotlin y escaneo de Notas" />
     <MESSAGE value="feat: Extraccion y escaneo del contenido de las Certificaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Extraccion y escaneo del contenido de las Certificaciones" />
+    <MESSAGE value="feat: Clase de extraccion de Informacion del Documento" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Clase de extraccion de Informacion del Documento" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -613,13 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/dbf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Equivalencia.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -680,10 +692,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/dbf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/corex/sisconot/Escaneo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+        <state relative-caret-position="416">
+          <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
           <folding>
             <element signature="e#28#129#0" expanded="true" />
           </folding>
